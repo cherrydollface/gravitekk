@@ -25,18 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>        show_message("What's the heck??????");
-///loop through room and find tile of -5 depth and create a collision object.
-for (var xx = 0; xx&lt;=room_width;xx+=32)
-for (var yy = 0; yy&lt;=room_height;yy+=32)
-    {
-    if (tile_layer_find(-5,xx,yy))
-        {
-        instance_create(xx,yy,o_solid);
+            <string>///loop through room and find tile of -5 depth and create a collision object.
+for (var xx = 0; xx &lt;= room_width; xx += CELLSIZE)
+    for (var yy = 0; yy &lt;= room_height; yy += CELLSIZE) {
+        if (tile_layer_find(-5, xx, yy)) {
+            instance_create(xx, yy, o_solid);
         }
     }
-
-
 
 
 // Number of surfaces to divide the room into,
@@ -49,65 +44,75 @@ surfaces_h = 1;
 // List of room's tile layers to flatten into a single layer.
 // If some layers cannot be flattened, consider modifying
 // this object so that multiple instances can be used.
-var layers; layers = ds_queue_create();
+var layers;
+layers = ds_queue_create();
 // Must be in descending order
-ds_queue_enqueue(layers,100);
-ds_queue_enqueue(layers,-5);
+ds_queue_enqueue(layers, 100);
+ds_queue_enqueue(layers, -5);
 
 // Assumes that the tiles in a room are in a regular grid,
 // and tiles have a minimum size equal to the following:
-var tilewidth; tilewidth = 32;
-var tileheight; tileheight = 32;
+var tilewidth;
+tilewidth = CELLSIZE;
+var tileheight;
+tileheight = CELLSIZE;
 
-surface_width = room_width/surfaces_w;
-surface_height = room_height/surfaces_h;
+surface_width = room_width / surfaces_w;
+surface_height = room_height / surfaces_h;
 
-var i,j;
+var i, j;
 // Create the surfaces
-for(i=0; i&lt;surfaces_w; i+=1) {
-  for(j=0; j&lt;surfaces_h; j+=1) {
-    surf[i,j] = surface_create(surface_width,surface_height);
-    surface_set_target(surf[i,j]);
-    draw_clear_alpha(0,0);
-    surface_reset_target() 
-  }
+for (i = 0; i &lt; surfaces_w; i += 1) {
+    for (j = 0; j &lt; surfaces_h; j += 1) {
+        surf[i, j] = surface_create(surface_width, surface_height);
+        surface_set_target(surf[i, j]);
+        draw_clear_alpha(0, 0);
+        surface_reset_target()
+    }
 }
 
-var count; count=0;
+var count;
+count = 0;
 
 do {
-  // For each tile layer
-  var layerdepth; layerdepth = ds_queue_dequeue(layers);
-  // Copy all the tiles to the corresponding surface
-  for(i=0; i&lt;surfaces_w; i+=1) {
-    for(j=0; j&lt;surfaces_h; j+=1) {
-      surface_set_target(surf[i,j]);
-      // Since tile_layer_find() is the only way to access room tiles,
-      // we must sweep over the entire room.
-      for(xx = surface_width*i; xx&lt;(surface_width*(i+1)); xx+=tilewidth) {
-        for(yy = surface_height*j; yy&lt;(surface_height*(j+1)); yy+=tileheight) {
-          var t; t = tile_layer_find(layerdepth,xx,yy);
-          if (tile_exists(t)) {
-            var b; b = tile_get_background(t);
-            var l; l = tile_get_left(t);
-            var p; p = tile_get_top(t);
-            var w; w = tile_get_width(t);
-            var h; h = tile_get_height(t);
-            draw_background_part(b,l,p,w,h,xx-(surface_width*i),yy-(surface_height*j));
-            tile_delete(t);
-            count+=1;
-          }
+    // For each tile layer
+    var layerdepth;
+    layerdepth = ds_queue_dequeue(layers);
+    // Copy all the tiles to the corresponding surface
+    for (i = 0; i &lt; surfaces_w; i += 1) {
+        for (j = 0; j &lt; surfaces_h; j += 1) {
+            surface_set_target(surf[i, j]);
+            // Since tile_layer_find() is the only way to access room tiles,
+            // we must sweep over the entire room.
+            for (xx = surface_width * i; xx &lt; (surface_width * (i + 1)); xx += tilewidth) {
+                for (yy = surface_height * j; yy &lt; (surface_height * (j + 1)); yy += tileheight) {
+                    var t;
+                    t = tile_layer_find(layerdepth, xx, yy);
+                    if (tile_exists(t)) {
+                        var b;
+                        b = tile_get_background(t);
+                        var l;
+                        l = tile_get_left(t);
+                        var p;
+                        p = tile_get_top(t);
+                        var w;
+                        w = tile_get_width(t);
+                        var h;
+                        h = tile_get_height(t);
+                        draw_background_part(b, l, p, w, h, xx - (surface_width * i), yy - (surface_height * j));
+                        tile_delete(t);
+                        count += 1;
+                    }
+                }
+            }
+            surface_reset_target();
         }
-      }
-      surface_reset_target();
     }
-  }
-} until ds_queue_empty(layers);
-
+}
+until ds_queue_empty(layers);
 
 ds_queue_destroy(layers);
-
-show_message(string(count)+" tiles destroyed");
+//show_message(string(count)+" tiles destroyed");
 </string>
           </argument>
         </arguments>
@@ -130,12 +135,13 @@ show_message(string(count)+" tiles destroyed");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i,j;
-for(i=0; i&lt;surfaces_w; i+=1) {
-  for(j=0; j&lt;surfaces_h; j+=1) {
-    surface_free(surf[i,j]);
-  }
-}</string>
+            <string>var i, j;
+for (i = 0; i &lt; surfaces_w; i += 1) {
+    for (j = 0; j &lt; surfaces_h; j += 1) {
+        surface_free(surf[i, j]);
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -157,17 +163,19 @@ for(i=0; i&lt;surfaces_w; i+=1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i,j;
-for(i=0; i&lt;surfaces_w; i+=1) {
-  for(j=0; j&lt;surfaces_h; j+=1) {
-    if (global.gamestate != STATE_GAME) {
-        shader_set(shader_grayscale);
-        draw_surface(surf[i,j],surface_width*i,surface_height*j);
-        shader_reset();
-    } else {
-        draw_surface(surf[i,j],surface_width*i,surface_height*j);
+            <string>var i, j;
+
+for (i = 0; i &lt; surfaces_w; i += 1) {
+    for (j = 0; j &lt; surfaces_h; j += 1) {
+        if (global.gamestate != STATE_GAME) {
+            shader_set(shader_grayscale);
+            draw_surface(surf[i, j], surface_width * i, surface_height * j);
+            shader_reset();
+        } else {
+            draw_surface(surf[i, j], surface_width * i, surface_height * j);
+        }
+        draw_background(bg_statusbar2, 0, 480 -32)
     }
-  }
 }
 </string>
           </argument>

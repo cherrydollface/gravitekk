@@ -130,34 +130,32 @@ else { //if current character is more than the amount in the current message
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_part(sprite_window, 0, 0, 0, 32, 32, x, y)
+            <string>draw_sprite_part(sprite_window, 0, 0, 0, CELLSIZE, CELLSIZE, x, y)
 var i;
 var c = 1;
 var cc = 1;
-for (i = 1; i &lt; 10; i += 1)
-   {
-   draw_sprite_part(sprite_window, 0, 32, 0, 32, 32, x + i*32, y);
-   c++;
-   }
-draw_sprite_part(sprite_window, 0, 96 - 32, 0, 32, 32, x + c*32, y);   
-for (j = 1; j &lt; 5; j +=1) {
-    draw_sprite_part(sprite_window, 0, 0, 32, 32, 32, x, y + 32 * j); 
-    c = 1;
-    for (i = 1; i &lt; 10; i += 1)
-   {
-    draw_sprite_part(sprite_window, 0, 32, 32, 32, 32, x + i*32, y + 32 * j);
+for (i = 1; i &lt; 10; i += 1) {
+    draw_sprite_part(sprite_window, 0, CELLSIZE, 0, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y);
     c++;
-   }
-   draw_sprite_part(sprite_window, 0, 96 - 32, 32, 32, 32, x + c*32, y + 32 * j);         
-   cc++;
 }
-draw_sprite_part(sprite_window, 0, 0, 64, 32, 32, x, y + cc*32)
-for (i = 1; i &lt; 10; i += 1)
-   {
-   draw_sprite_part(sprite_window, 0, 32, 64, 32, 32, x + i*32, y + cc*32);
-   }
-draw_sprite_part(sprite_window, 0, 96 - 32, 64, 32, 32, x + c*32, y + cc*32);   
-//draw_text(x, y, message_draw); //draw the text at the coordinates
+
+draw_sprite_part(sprite_window, 0, 96 - 32, 0, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y);
+for (j = 1; j &lt; 5; j += 1) {
+    draw_sprite_part(sprite_window, 0, 0, CELLSIZE, CELLSIZE, CELLSIZE, x, y + CELLSIZE * j);
+    c = 1;
+    for (i = 1; i &lt; 10; i += 1) {
+        draw_sprite_part(sprite_window, 0, CELLSIZE, CELLSIZE, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + CELLSIZE * j);
+        c++;
+    }
+    draw_sprite_part(sprite_window, 0, 96 - 32, CELLSIZE, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + CELLSIZE * j);
+    cc++;
+}
+draw_sprite_part(sprite_window, 0, 0, 64, CELLSIZE, CELLSIZE, x, y + cc * CELLSIZE)
+for (i = 1; i &lt; 10; i += 1) {
+    draw_sprite_part(sprite_window, 0, CELLSIZE, 64, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + cc * CELLSIZE);
+}
+draw_sprite_part(sprite_window, 0, 96 - 32, 64, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
+
 draw_set_colour(c_white);
 draw_set_font(font0);
 draw_text_ext(x + 16, y + 16, message_draw, 16, 300);

@@ -6,41 +6,39 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\brickwall</sprite>
-    <sprite>sprites\sprite_window</sprite>
+    <sprite>sprites\sprite_player</sprite>
+    <sprite>sprites\sprite_brickwall</sprite>
     <sprite>sprites\sprite_gravipad</sprite>
+    <sprites name="ui">
+      <sprite>sprites\sprite_window</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\forest</background>
+    <background>background\tiles_forest</background>
+    <background>background\bg_statusbar</background>
+    <background>background\bg_statusbar2</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\move_cw1</path>
-    <path>paths\move_cw2</path>
-    <path>paths\move_cw3</path>
-    <path>paths\move_cw4</path>
-    <path>paths\move_ccw1</path>
-    <path>paths\move_ccw2</path>
-    <path>paths\move_ccw3</path>
-    <path>paths\circle_path_cw</path>
-    <path>paths\path8</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_LayerShader_Start.gml</script>
-    <script>scripts\scr_LayerShader_End.gml</script>
+    <script>scripts\scr_player_move.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\font2</font>
   </fonts>
   <objects name="objects">
-    <object>objects\player</object>
-    <object>objects\o_solid</object>
-    <object>objects\window</object>
-    <object>objects\gravipad</object>
-    <object>objects\o_tilesurfacer</object>
+    <object>objects\o_player</object>
+    <object>objects\o_gravipad</object>
+    <objects name="helpers">
+      <object>objects\o_tilesurfacer</object>
+      <object>objects\o_window</object>
+      <object>objects\o_solid</object>
+      <object>objects\o_pager</object>
+      <object>objects\o_pager2</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
