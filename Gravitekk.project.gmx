@@ -3,27 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
-    <datafiles number="1" name="text">
-      <datafile>
-        <name>mission1.ini</name>
-        <exists>-1</exists>
-        <size>17</size>
-        <exportAction>2</exportAction>
-        <exportDir></exportDir>
-        <overwrite>0</overwrite>
-        <freeData>-1</freeData>
-        <removeEnd>0</removeEnd>
-        <store>0</store>
-        <ConfigOptions>
-          <Config name="Default">
-            <CopyToMask>9223372036854775807</CopyToMask>
-          </Config>
-        </ConfigOptions>
-        <filename>mission1.ini</filename>
-      </datafile>
-    </datafiles>
-  </datafiles>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -37,17 +17,18 @@
   <backgrounds name="background">
     <background>background\tiles_forest</background>
     <background>background\bg_statusbar</background>
-    <background>background\bg_statusbar2</background>
     <background>background\bg_city</background>
     <background>background\bg_worm</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_player_move.gml</script>
-    <script>scripts\scr_chapter.gml</script>
-    <scripts name="auto">
-      <script>scripts\scr_messager_init.gml</script>
-      <script>scripts\scr_event_handler.gml</script>
+    <scripts name="GUI">
+      <script>scripts\scr_draw_window.gml</script>
+    </scripts>
+    <scripts name="Auto">
+      <script>scripts\scr_chapter1_messager_init.gml</script>
+      <script>scripts\scr_chapter1_event_handler.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -65,17 +46,16 @@
       <object>objects\o_window</object>
       <object>objects\o_solid</object>
       <object>objects\o_pager</object>
-      <object>objects\o_pager2</object>
       <object>objects\o_bg</object>
       <objects name="novel">
         <object>objects\o_novel_window</object>
+        <object>objects\o_novel_world</object>
       </objects>
     </objects>
-    <object>objects\o_test</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
-    <room>rooms\room0</room>
+    <room>rooms\chapter1</room>
+    <room>rooms\mission1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

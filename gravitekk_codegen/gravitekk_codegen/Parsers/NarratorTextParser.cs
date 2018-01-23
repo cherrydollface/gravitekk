@@ -23,7 +23,7 @@ namespace gravitekk_codegen.Parsers {
 			output = new GeneratedCodeChunk
 			{
 				GeneratedCodeTarget = GeneratedCodeTarget.MessageConstructor,
-				GeneratedCode = new List<string> {$"messages += \"{message}\""}
+				GeneratedCode = new List<string> {$"ds_queue_enqueue(messages, \"{message}\");"}
 			};
 
 			return true;

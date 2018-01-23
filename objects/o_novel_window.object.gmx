@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>o_window</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,48 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>messages = ds_queue_create();
+ds_queue_enqueue(messages, "Chapter 1. Arrival");
 
+var world = instance_find(o_novel_world, 0);
+script_execute(world.messager_script);
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_messager_init</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -93,7 +56,7 @@ characters = 0; //how many characters have already been drawn
 hold = 0; //if we hold 'Z', the text will render faster
 
 message_current = 0;
-message_end = ds_queue_size(messages);
+message_end = ds_queue_size(messages) - 1;
 curmsg = ds_queue_dequeue(messages);
 message_length = string_length(curmsg); //get the number of characters in the first message
 </string>
@@ -149,15 +112,19 @@ message_length = string_length(curmsg); //get the number of characters in the fi
 else { //if current character is more than the amount in the current message
     if (mouse_check_button_pressed(mb_left)) { //if we press Z...
         if (message_current &lt; message_end) { //if there are more messages left to show (0 -&gt; 6, in our case)
+            var world = instance_find(o_novel_world, 0);  
+            script_execute(world.event_handler_script, message_current);
+            
             message_current += 1; //increase the message by 1
             curmsg = ds_queue_dequeue(messages);
             message_length = string_length(curmsg);  //get the new character length for message
             characters = 0; //set the characters back to 0
-            message_draw = ""; //clear the drawn text
+            message_draw = ""; //clear the drawn text            
         }
         else { //if our messages are done (we reach 6, in our case)...
             instance_destroy(); //destroy the object
         }
+      
     }
 }
 </string>
@@ -168,52 +135,17 @@ else { //if current character is more than the amount in the current message
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>604</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_part(sprite_window, 0, 0, 0, CELLSIZE, CELLSIZE, x, y)
-var i;
-var c = 1;
-var cc = 1;
-for (i = 1; i &lt; 10; i += 1) {
-    draw_sprite_part(sprite_window, 0, CELLSIZE, 0, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y);
-    c++;
-}
-
-draw_sprite_part(sprite_window, 0, 96 - 32, 0, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y);
-for (j = 1; j &lt; 5; j += 1) {
-    draw_sprite_part(sprite_window, 0, 0, CELLSIZE, CELLSIZE, CELLSIZE, x, y + CELLSIZE * j);
-    c = 1;
-    for (i = 1; i &lt; 10; i += 1) {
-        draw_sprite_part(sprite_window, 0, CELLSIZE, CELLSIZE, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + CELLSIZE * j);
-        c++;
-    }
-    draw_sprite_part(sprite_window, 0, 96 - 32, CELLSIZE, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + CELLSIZE * j);
-    cc++;
-}
-draw_sprite_part(sprite_window, 0, 0, 64, CELLSIZE, CELLSIZE, x, y + cc * CELLSIZE)
-for (i = 1; i &lt; 10; i += 1) {
-    draw_sprite_part(sprite_window, 0, CELLSIZE, 64, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + cc * CELLSIZE);
-}
-draw_sprite_part(sprite_window, 0, 96 - 32, 64, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
-
-draw_set_colour(c_white);
-draw_set_font(font0);
-draw_text_ext(x + 16, y + 16, message_draw, 16, 300);
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>

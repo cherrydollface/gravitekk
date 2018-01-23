@@ -130,35 +130,7 @@ else { //if current character is more than the amount in the current message
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_part(sprite_window, 0, 0, 0, CELLSIZE, CELLSIZE, x, y)
-var i;
-var c = 1;
-var cc = 1;
-for (i = 1; i &lt; 10; i += 1) {
-    draw_sprite_part(sprite_window, 0, CELLSIZE, 0, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y);
-    c++;
-}
-
-draw_sprite_part(sprite_window, 0, 96 - 32, 0, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y);
-for (j = 1; j &lt; 5; j += 1) {
-    draw_sprite_part(sprite_window, 0, 0, CELLSIZE, CELLSIZE, CELLSIZE, x, y + CELLSIZE * j);
-    c = 1;
-    for (i = 1; i &lt; 10; i += 1) {
-        draw_sprite_part(sprite_window, 0, CELLSIZE, CELLSIZE, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + CELLSIZE * j);
-        c++;
-    }
-    draw_sprite_part(sprite_window, 0, 96 - 32, CELLSIZE, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + CELLSIZE * j);
-    cc++;
-}
-draw_sprite_part(sprite_window, 0, 0, 64, CELLSIZE, CELLSIZE, x, y + cc * CELLSIZE)
-for (i = 1; i &lt; 10; i += 1) {
-    draw_sprite_part(sprite_window, 0, CELLSIZE, 64, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + cc * CELLSIZE);
-}
-draw_sprite_part(sprite_window, 0, 96 - 32, 64, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
-
-draw_set_colour(c_white);
-draw_set_font(font0);
-draw_text_ext(x + 16, y + 16, message_draw, 16, 300);
+            <string>scr_draw_window(10, 5);
 </string>
           </argument>
         </arguments>
