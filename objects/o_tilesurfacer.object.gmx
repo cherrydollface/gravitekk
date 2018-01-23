@@ -113,6 +113,11 @@ until ds_queue_empty(layers);
 
 ds_queue_destroy(layers);
 //show_message(string(count)+" tiles destroyed");
+
+ini_open("text\mission1.ini");
+kk = string(ini_read_real("Test", "Test", 6));
+ini_close();
+show_message("It works!!! " + kk);
 </string>
           </argument>
         </arguments>

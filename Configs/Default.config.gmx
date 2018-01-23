@@ -657,7 +657,10 @@
     <option_xbone_title_id>1234ABCD</option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="3">
+    <constants number="6">
+      <constant name="BGSTATE_FADE_IN">2</constant>
+      <constant name="BGSTATE_FADE_OUT">1</constant>
+      <constant name="BGSTATE_IDLE">0</constant>
       <constant name="STATE_GAME">1</constant>
       <constant name="STATE_CUTSCENE">0</constant>
       <constant name="CELLSIZE">32</constant>
