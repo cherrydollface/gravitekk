@@ -16,7 +16,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_forest</background>
-    <background>background\bg_statusbar</background>
+    <background>background\bg_statusbar2</background>
     <background>background\bg_city</background>
     <background>background\bg_worm</background>
   </backgrounds>
