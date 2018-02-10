@@ -10,6 +10,7 @@
     <sprite>sprites\sprite_player</sprite>
     <sprite>sprites\sprite_brickwall</sprite>
     <sprite>sprites\sprite_gravipad</sprite>
+    <sprite>sprites\sprite_cursor</sprite>
     <sprites name="ui">
       <sprite>sprites\sprite_window</sprite>
     </sprites>
@@ -23,6 +24,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_player_move.gml</script>
+    <script>scripts\scr_menu.gml</script>
     <scripts name="GUI">
       <script>scripts\scr_draw_window.gml</script>
     </scripts>
@@ -30,6 +32,15 @@
       <script>scripts\scr_chapter1_messager_init.gml</script>
       <script>scripts\scr_chapter1_event_handler.gml</script>
     </scripts>
+    <scripts name="Pause">
+      <script>scripts\scr_pause_game.gml</script>
+      <script>scripts\scr_unpause_game.gml</script>
+    </scripts>
+    <scripts name="Save / Load">
+      <script>scripts\scr_save.gml</script>
+      <script>scripts\scr_load.gml</script>
+    </scripts>
+    <script>scripts\scr_pause_menu.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
@@ -39,8 +50,10 @@
     <font>fonts\font2</font>
   </fonts>
   <objects name="objects">
+    <object>objects\o_menu</object>
     <object>objects\o_player</object>
     <object>objects\o_gravipad</object>
+    <object>objects\o_pause</object>
     <objects name="helpers">
       <object>objects\o_tilesurfacer</object>
       <object>objects\o_window</object>
@@ -54,8 +67,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\chapter1</room>
+    <room>rooms\startMenu</room>
     <room>rooms\mission1</room>
+    <room>rooms\chapter1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
