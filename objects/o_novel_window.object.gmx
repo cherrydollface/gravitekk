@@ -104,7 +104,9 @@ message_length = string_length(curmsg); //get the number of characters in the fi
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (characters &lt; message_length) { //if current character count is less than the amount in current message* 
+            <string>if(global.gamestate == STATE_PAUSE) return 0;
+
+if (characters &lt; message_length) { //if current character count is less than the amount in current message* 
    // hold = keyboard_check(ord("Z")); //hold is true or false if we hold 'Z' or not
     characters += increase * (1 + hold); //increase speed based on hold
     message_draw = string_copy(curmsg, 0, characters); //copy string to current character

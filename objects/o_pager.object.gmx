@@ -54,7 +54,9 @@ offset = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>offset = offset + 2;
+            <string>if(global.gamestate == STATE_PAUSE) return 0;
+
+offset = offset + 2;
 if(offset &gt; string_width(message) + width) {
     offset = 0;
 }

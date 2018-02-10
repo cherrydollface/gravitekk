@@ -54,8 +54,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\chapter1</room>
     <room>rooms\mission1</room>
+    <room>rooms\chapter1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
