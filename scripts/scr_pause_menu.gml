@@ -1,5 +1,4 @@
-// Pause menu
-// Menu commands
+// Pause menu commands listener
 switch(menuPosition){
     case 0 : {   // Resume
         scr_unpause_game();

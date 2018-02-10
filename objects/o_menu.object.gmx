@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>// Main menu 
+
+//Initializing global variables
+scr_global_variables();
+
 // Available selections
 menu[0] = "Start"; 
 menu[1] = "Load";
@@ -33,14 +37,14 @@ menu[2] = "Option";
 menu[3] = "About";
 menu[4] = "Quit";
 
+global.menuElements = menu;
+
 // Misc values
 spaceBetweenPositions = 64; 
 
 // Menu cursor position
 menuPosition = 0; 
 
-// Initializing pause system
-scr_unpause_game();
 </string>
           </argument>
         </arguments>
@@ -64,27 +68,13 @@ scr_unpause_game();
           <argument>
             <kind>1</kind>
             <string>// Move selected area in menu
-// Start position 
-var move = 0;
-
-// Change postion
-move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
-move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
-
-// Reach maximum or minimum position value
-if(move != 0){
-    menuPosition += move;
-    if(menuPosition &lt; 0) menuPosition = array_length_1d(menu) - 1;  
-    if(menuPosition &gt; array_length_1d(menu) - 1) menuPosition = 0;  
-}
-
 // Active button
-var push;
-push = max(keyboard_check_released(vk_enter), 
+var push = max(keyboard_check_released(vk_enter), 
            keyboard_check_released(vk_shift), 
            keyboard_check_released(vk_space), 0);
-           
+
 // Call menu
+scr_cursor_logic(); // Active cursor logic
 if (push == 1) scr_menu();
 </string>
           </argument>
@@ -109,18 +99,7 @@ if (push == 1) scr_menu();
           <argument>
             <kind>1</kind>
             <string>// Draw menu
-draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
-draw_set_font(font0);
-draw_set_colour(c_white)
-
-// Draw menu elements
-for(var i = 0; i &lt; array_length_1d(menu); i++){
-    draw_text(x + spaceBetweenPositions, y + (i * spaceBetweenPositions), string(menu[i]))
-    }
-
-// Draw selection
-draw_sprite(sprite_cursor, 0, x + 16, y + 16 + menuPosition * spaceBetweenPositions);
+scr_draw_menu_board();
 </string>
           </argument>
         </arguments>
