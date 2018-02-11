@@ -24,10 +24,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_player_move.gml</script>
-    <script>scripts\scr_global_variables.gml</script>
-    <script>scripts\scr_pause_menu.gml</script>
-    <script>scripts\scr_cursor_logic.gml</script>
-    <script>scripts\scr_menu.gml</script>
     <scripts name="GUI">
       <script>scripts\scr_draw_window.gml</script>
       <script>scripts\scr_cover_of_darkness.gml</script>
@@ -41,9 +37,17 @@
       <script>scripts\scr_pause_game.gml</script>
       <script>scripts\scr_unpause_game.gml</script>
     </scripts>
-    <scripts name="Save / Load">
+    <scripts name="Save Load">
       <script>scripts\scr_save.gml</script>
       <script>scripts\scr_load.gml</script>
+    </scripts>
+    <script>scripts\scr_cursor_logic.gml</script>
+    <scripts name="Service">
+      <scripts name="MainMenu">
+        <script>scripts\scr_menu.gml</script>
+      </scripts>
+      <script>scripts\scr_pause_menu.gml</script>
+      <script>scripts\scr_global_variables.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
