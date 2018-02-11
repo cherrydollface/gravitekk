@@ -75,7 +75,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
+<<<<<<< HEAD
     <room>rooms\startMenu</room>
+=======
+>>>>>>> fe93d77c88980b5a29e0f439f51473a6988e6aef
     <room>rooms\mission1</room>
     <room>rooms\chapter1</room>
   </rooms>
