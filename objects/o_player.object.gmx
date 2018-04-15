@@ -271,6 +271,28 @@ move_snap( CELLSIZE, CELLSIZE );
       </action>
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var world = instance_find(o_mission_world, 0);
+world.sequence_index = 6;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>201</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -289,11 +311,11 @@ move_snap( CELLSIZE, CELLSIZE );
           </argument>
           <argument>
             <kind>0</kind>
-            <string>64</string>
+            <string>96</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>64</string>
+            <string>32</string>
           </argument>
         </arguments>
       </action>

@@ -27,6 +27,3 @@ for (i = 1; i < widthCells; i += 1) {
 }
 draw_sprite_part(sprite_window, 0, 96 - 32, 64, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
 
-draw_set_colour(c_white);
-draw_set_font(font0);
-draw_text_ext(x + 16, y + 16, message_draw, 16, 300);

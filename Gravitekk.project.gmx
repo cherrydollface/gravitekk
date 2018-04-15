@@ -13,23 +13,35 @@
     <sprites name="ui">
       <sprite>sprites\sprite_window</sprite>
     </sprites>
+    <sprite>sprites\sprite_dispatcher</sprite>
+    <sprites name="helpers">
+      <sprite>sprites\sprite_mission_world</sprite>
+      <sprite>sprites\sprite_tile_surfacer</sprite>
+      <sprite>sprites\sprite_small_helper</sprite>
+      <sprite>sprites\sprite_bg_ctrl_helper</sprite>
+      <sprite>sprites\sprite_novel_world</sprite>
+      <sprite>sprites\sprite_pager_msg_helper</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_forest</background>
     <background>background\bg_statusbar2</background>
     <background>background\bg_city</background>
     <background>background\bg_worm</background>
+    <background>background\test_tileset1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_player_move.gml</script>
     <scripts name="GUI">
       <script>scripts\scr_draw_window.gml</script>
+      <script>scripts\scr_draw_window_text.gml</script>
     </scripts>
     <scripts name="Auto">
       <script>scripts\scr_chapter1_messager_init.gml</script>
       <script>scripts\scr_chapter1_event_handler.gml</script>
     </scripts>
+    <script>scripts\scr_mission_1.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
@@ -42,19 +54,24 @@
     <object>objects\o_player</object>
     <object>objects\o_gravipad</object>
     <objects name="helpers">
-      <object>objects\o_tilesurfacer</object>
       <object>objects\o_window</object>
-      <object>objects\o_solid</object>
-      <object>objects\o_pager</object>
-      <object>objects\o_bg</object>
       <objects name="novel">
         <object>objects\o_novel_window</object>
         <object>objects\o_novel_world</object>
+        <object>objects\o_bg</object>
+      </objects>
+      <objects name="mission">
+        <object>objects\o_tilesurfacer</object>
+        <object>objects\o_solid</object>
+        <object>objects\o_mission_world</object>
+        <object>objects\o_dialog_portraiit</object>
+        <object>objects\o_pager</object>
       </objects>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\mission1</room>
+    <room>rooms\bootcamp</room>
     <room>rooms\chapter1</room>
   </rooms>
   <help>
