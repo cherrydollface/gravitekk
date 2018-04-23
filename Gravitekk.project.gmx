@@ -12,6 +12,7 @@
     <sprite>sprites\sprite_gravipad</sprite>
     <sprites name="ui">
       <sprite>sprites\sprite_window</sprite>
+      <sprite>sprites\sprite_button_small</sprite>
     </sprites>
     <sprite>sprites\sprite_dispatcher</sprite>
     <sprites name="helpers">
@@ -22,6 +23,8 @@
       <sprite>sprites\sprite_novel_world</sprite>
       <sprite>sprites\sprite_pager_msg_helper</sprite>
     </sprites>
+    <sprite>sprites\sprite_beacon_crystal</sprite>
+    <sprite>sprites\sprite_building2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_forest</background>
@@ -36,6 +39,7 @@
     <scripts name="GUI">
       <script>scripts\scr_draw_window.gml</script>
       <script>scripts\scr_draw_window_text.gml</script>
+      <script>scripts\scr_skip_button_destroy.gml</script>
     </scripts>
     <scripts name="Auto">
       <script>scripts\scr_chapter1_messager_init.gml</script>
@@ -47,8 +51,8 @@
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
   </shaders>
   <fonts name="fonts">
-    <font>fonts\font0</font>
-    <font>fonts\font2</font>
+    <font>fonts\message_font</font>
+    <font>fonts\pager_font</font>
   </fonts>
   <objects name="objects">
     <object>objects\o_player</object>
@@ -67,6 +71,12 @@
         <object>objects\o_dialog_portraiit</object>
         <object>objects\o_pager</object>
       </objects>
+    </objects>
+    <object>objects\o_beacon_crystal</object>
+    <object>objects\o_building1</object>
+    <objects name="ui">
+      <object>objects\o_button</object>
+      <object>objects\o_skip_button</object>
     </objects>
   </objects>
   <rooms name="rooms">

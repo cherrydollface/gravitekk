@@ -10,7 +10,7 @@ for (i = 1; i < widthCells; i += 1) {
     c++;
 }
 
-draw_sprite_part(sprite_window, 0, 96 - 32, 0, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y);
+draw_sprite_part(sprite_window, 0, CELLSIZE * 2, 0, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y);
 for (j = 1; j < heightCells; j += 1) {
     draw_sprite_part(sprite_window, 0, 0, CELLSIZE, CELLSIZE, CELLSIZE, x, y + CELLSIZE * j);
     c = 1;
@@ -18,12 +18,12 @@ for (j = 1; j < heightCells; j += 1) {
         draw_sprite_part(sprite_window, 0, CELLSIZE, CELLSIZE, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + CELLSIZE * j);
         c++;
     }
-    draw_sprite_part(sprite_window, 0, 96 - 32, CELLSIZE, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + CELLSIZE * j);
+    draw_sprite_part(sprite_window, 0, CELLSIZE * 2, CELLSIZE, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + CELLSIZE * j);
     cc++;
 }
-draw_sprite_part(sprite_window, 0, 0, 64, CELLSIZE, CELLSIZE, x, y + cc * CELLSIZE)
+draw_sprite_part(sprite_window, 0, 0, CELLSIZE * 2, CELLSIZE, CELLSIZE, x, y + cc * CELLSIZE)
 for (i = 1; i < widthCells; i += 1) {
-    draw_sprite_part(sprite_window, 0, CELLSIZE, 64, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + cc * CELLSIZE);
+    draw_sprite_part(sprite_window, 0, CELLSIZE, CELLSIZE * 2, CELLSIZE, CELLSIZE, x + i * CELLSIZE, y + cc * CELLSIZE);
 }
-draw_sprite_part(sprite_window, 0, 96 - 32, 64, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
+draw_sprite_part(sprite_window, 0, CELLSIZE * 2, CELLSIZE * 2, CELLSIZE, CELLSIZE, x + c * CELLSIZE, y + cc * CELLSIZE);
 

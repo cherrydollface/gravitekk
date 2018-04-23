@@ -28,7 +28,7 @@
             <string>///loop through room and find tile of -5 depth and create a collision object.
 for (var xx = 0; xx &lt;= room_width; xx += CELLSIZE)
     for (var yy = 0; yy &lt;= room_height; yy += CELLSIZE) {
-        if (tile_layer_find(-5, xx, yy)) {
+        if (tile_layer_find(1, xx, yy)) {
             instance_create(xx, yy, o_solid);
         }
     }

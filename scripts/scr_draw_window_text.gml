@@ -1,3 +1,3 @@
 draw_set_colour(c_white);
-draw_set_font(font0);
-draw_text_ext(x + 16, y + 16, message_draw, 16, 300);
+draw_set_font(message_font);
+draw_text_ext(x + CELLSIZE * 0.5, y + CELLSIZE * 0.5, message_draw, CELLSIZE * 0.5, 300);
