@@ -26,8 +26,11 @@
     <script>scripts\scr_player_move.gml</script>
     <scripts name="GUI">
       <script>scripts\scr_draw_window.gml</script>
-      <script>scripts\scr_cover_of_darkness.gml</script>
+      <script>scripts\scr_light_room.gml</script>
+      <script>scripts\scr_draw_cover_of_darkness.gml</script>
       <script>scripts\scr_draw_menu_board.gml</script>
+      <script>scripts\scr_initialize_menus.gml</script>
+      <script>scripts\scr_draw_save_load_menu.gml</script>
     </scripts>
     <scripts name="Auto">
       <script>scripts\scr_chapter1_messager_init.gml</script>
@@ -43,15 +46,13 @@
     </scripts>
     <script>scripts\scr_cursor_logic.gml</script>
     <scripts name="Service">
-      <scripts name="MainMenu">
-        <script>scripts\scr_menu.gml</script>
-      </scripts>
-      <script>scripts\scr_pause_menu.gml</script>
       <script>scripts\scr_global_variables.gml</script>
     </scripts>
+    <script>scripts\scr_test.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
+    <shader type="GLSLES">shaders\shader1.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -75,10 +76,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
-<<<<<<< HEAD
     <room>rooms\startMenu</room>
-=======
->>>>>>> fe93d77c88980b5a29e0f439f51473a6988e6aef
     <room>rooms\mission1</room>
     <room>rooms\chapter1</room>
   </rooms>

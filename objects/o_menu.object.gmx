@@ -26,10 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>// Main menu 
+// Initializing global variables
 
-//Initializing global variables
-scr_global_variables();
+//room_goto("startMenu");
+global.gameState = STATE_MENU;
 
+
+//scr_unpause_game();
+
+//scr_global_variables();
+
+//show_debug_message("Fame state");
+//show_debug_message(global.gameState);
+
+/*
 // Available selections
 menu[0] = "Start"; 
 menu[1] = "Load";
@@ -38,13 +48,11 @@ menu[3] = "About";
 menu[4] = "Quit";
 
 global.menuElements = menu;
-
-// Misc values
-spaceBetweenPositions = 64; 
+global.playerInput = PLAYER_INPUT_ENABLED; // Problem with input mouse button click //Click activate 2 screens; current status only for disable inpt status
 
 // Menu cursor position
 menuPosition = 0; 
-
+*/
 </string>
           </argument>
         </arguments>
@@ -69,13 +77,55 @@ menuPosition = 0;
             <kind>1</kind>
             <string>// Move selected area in menu
 // Active button
+/*
 var push = max(keyboard_check_released(vk_enter), 
            keyboard_check_released(vk_shift), 
            keyboard_check_released(vk_space), 0);
 
+*/
+
+/*
+if(keyboard_check_pressed(vk_escape)){
+    if(global.gameState == STATE_PAUSE){
+        scr_unpause_game();
+       } else {
+        scr_pause_game();
+    }
+}*/
+/*
+
+
+var xPostition = x + SPACE_BETWEEN_POSITIONS;
+var xMaxRangePosition = xPostition + CELLSIZE * 6;
+var i = 0;
+var shift = 32;
+if(point_in_rectangle(mouse_x, mouse_y, xPostition, y + (0 * SPACE_BETWEEN_POSITIONS)
+    - shift, xMaxRangePosition, y + (1 * SPACE_BETWEEN_POSITIONS) - shift)){
+    if(mouse_check_button_pressed (mb_left)){room_goto_next();}} // Start game
+else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y + (1 * SPACE_BETWEEN_POSITIONS)
+    - shift, xMaxRangePosition, y + (2 * SPACE_BETWEEN_POSITIONS) - shift)){
+    if(mouse_check_button_pressed (mb_left)){
+        global.playerInput = PLAYER_INPUT_DISABLED;
+        global.gameState = STATE_LOAD;
+    }}        // Load
+else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y + (2 * SPACE_BETWEEN_POSITIONS)
+    - shift, xMaxRangePosition, y + (3 * SPACE_BETWEEN_POSITIONS) - shift)){
+    if(mouse_check_button_pressed (mb_left)){scr_load()}}        // About
+else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y + (3 * SPACE_BETWEEN_POSITIONS)
+    - shift, xMaxRangePosition, y + (4 * SPACE_BETWEEN_POSITIONS) - shift)){
+    if(mouse_check_button_pressed (mb_left)){}}                 // Option
+else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y + (4 * SPACE_BETWEEN_POSITIONS)
+    - shift, xMaxRangePosition, y + (5 * SPACE_BETWEEN_POSITIONS) - shift)){
+    if(mouse_check_button_pressed (mb_left)){game_end()}}       // Quit
+    
+    
+
+/*
+
 // Call menu
 scr_cursor_logic(); // Active cursor logic
-if (push == 1) scr_menu();
+if (push == 1) scr_menu(); 
+*/
 </string>
           </argument>
         </arguments>
@@ -99,7 +149,17 @@ if (push == 1) scr_menu();
           <argument>
             <kind>1</kind>
             <string>// Draw menu
+/*
 scr_draw_menu_board();
+
+if ((global.gameState == STATE_SAVE) || (global.gameState == STATE_LOAD)){  
+            //scr_cover_of_darkness();
+            scr_draw_menu_board();
+            scr_initialize_menus();
+            global.menuElements = global.savedGames;
+            global.playerInput = PLAYER_INPUT_ENABLED;
+            } 
+            */    
 </string>
           </argument>
         </arguments>

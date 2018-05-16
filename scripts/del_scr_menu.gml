@@ -1,6 +1,8 @@
 // Menu commands listener
+/*
+// Menu commands listener
 switch(menuPosition){
-    case 0 : {   //Start Game
+    case 0 : {   // Start Game
         room_goto_next();
         break;
     }
@@ -19,4 +21,4 @@ switch(menuPosition){
         break;
     }
     default: break;
-}
+} */

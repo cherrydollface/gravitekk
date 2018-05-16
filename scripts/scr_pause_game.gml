@@ -1,5 +1,6 @@
 // Change status of pause
-global.isPaused = true; 
+global.gameState = STATE_PAUSE
 
 // Active all instance
-instance_deactivate_all(true);
+instance_deactivate_all(true)
+

@@ -1,5 +1,7 @@
 //Initializing
 global.menuElements = 0;
-global.isPaused = false;
+global.mainMenuElements = 0;
+global.pauseMenuElements = 0;
 global.menuPosition = 0;
-global.spaceBetweenPositions = CELLSIZE * 2;
+
+global.playerInput = PLAYER_INPUT_ENABLED

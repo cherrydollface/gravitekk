@@ -657,14 +657,31 @@
     <option_xbone_title_id>1234ABCD</option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="7">
+    <constants number="24">
       <constant name="BGSTATE_FADE_IN">2</constant>
       <constant name="BGSTATE_FADE_OUT">1</constant>
       <constant name="BGSTATE_IDLE">0</constant>
-      <constant name="STATE_PAUSE">2</constant>
-      <constant name="STATE_GAME">1</constant>
       <constant name="STATE_CUTSCENE">0</constant>
+      <constant name="STATE_GAME">1</constant>
+      <constant name="STATE_PAUSE">2</constant>
+      <constant name="STATE_SAVE">3</constant>
+      <constant name="STATE_LOAD">4</constant>
+      <constant name="STATE_MENU_LOAD">5</constant>
+      <constant name="STATE_MENU">7</constant>
       <constant name="CELLSIZE">32</constant>
+      <constant name="SPACE_BETWEEN_POSITIONS">CELLSIZE * 2</constant>
+      <constant name="MENU_MAIN_START">1</constant>
+      <constant name="MENU_MAIN_ABOUT">2</constant>
+      <constant name="MENU_PAUSE_RESUME">3</constant>
+      <constant name="MENU_PAUSE_SAVE">4</constant>
+      <constant name="MENU_LOAD">5</constant>
+      <constant name="MENU_QUIT">6</constant>
+      <constant name="SLOTS_FOR_SAVEGAME">4</constant>
+      <constant name="CURRENT_SAVE_SLOT">None</constant>
+      <constant name="PLAYER_INPUT_ENABLED">1</constant>
+      <constant name="PLAYER_INPUT_DISABLED">0</constant>
+      <constant name="MENU_X_POSITION">64</constant>
+      <constant name="MENU_Y_POSITION">96</constant>
     </constants>
   </ConfigConstants>
 </Config>
