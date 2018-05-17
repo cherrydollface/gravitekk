@@ -50,6 +50,7 @@ layers = ds_queue_create();
 
 ds_queue_enqueue(layers, 1000000);
 ds_queue_enqueue(layers, 999);
+ds_queue_enqueue(layers, 997);
 ds_queue_enqueue(layers, 996);
 
 
@@ -103,16 +104,21 @@ do {
                         w = tile_get_width(t);
                         var h;
                         h = tile_get_height(t);
+                        var pl_res = scr_slime_tilesurface_plugin(layerdepth, xx, yy, l, p, w, h);
+                        
                         if (layerdepth &lt; 1000) { 
                              draw_set_colour_write_enable(true, true, true, false)
                             //draw_enable_alphablend(false); 
                             //draw_set_blend_mode_ext(bm_one, bm_one);    
                         }
-                        draw_background_part(b, l, p, w, h, xx - (surface_width * i), yy - (surface_height * j));
+                        if(pl_res == 0) {
+                            draw_background_part(b, l, p, w, h, xx - (surface_width * i), yy - (surface_height * j));
+                        }
+
                         
                         draw_set_blend_mode(bm_normal);    
                         draw_enable_alphablend(true);
-                         draw_set_colour_write_enable(true, true, true, true)
+                        draw_set_colour_write_enable(true, true, true, true)
                             
                         tile_delete(t);
                         count += 1;

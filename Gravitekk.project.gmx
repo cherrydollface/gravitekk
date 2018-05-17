@@ -25,6 +25,7 @@
     </sprites>
     <sprite>sprites\sprite_beacon_crystal</sprite>
     <sprite>sprites\sprite_building2</sprite>
+    <sprite>sprites\sprite_death</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_forest</background>
@@ -46,6 +47,9 @@
       <script>scripts\scr_chapter1_event_handler.gml</script>
     </scripts>
     <script>scripts\scr_mission_1.gml</script>
+    <scripts name="Plugins">
+      <script>scripts\scr_slime_tilesurface_plugin.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
@@ -70,6 +74,7 @@
         <object>objects\o_mission_world</object>
         <object>objects\o_dialog_portraiit</object>
         <object>objects\o_pager</object>
+        <object>objects\o_bloodsack</object>
       </objects>
     </objects>
     <object>objects\o_beacon_crystal</object>
@@ -78,6 +83,8 @@
       <object>objects\o_button</object>
       <object>objects\o_skip_button</object>
     </objects>
+    <object>objects\o_slime</object>
+    <object>objects\o_death</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mission1</room>
