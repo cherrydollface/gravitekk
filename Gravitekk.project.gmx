@@ -26,6 +26,9 @@
     <sprite>sprites\sprite_beacon_crystal</sprite>
     <sprite>sprites\sprite_building2</sprite>
     <sprite>sprites\sprite_death</sprite>
+    <sprites name="masks">
+      <sprite>sprites\sprite_slime_border_mask</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_forest</background>
@@ -50,9 +53,14 @@
     <scripts name="Plugins">
       <script>scripts\scr_slime_tilesurface_plugin.gml</script>
     </scripts>
+    <scripts name="Slime">
+      <script>scripts\scr_redraw_slime_borders.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader_grayscale.shader</shader>
+    <shader type="GLSLES">shaders\shader_blur.shader</shader>
+    <shader type="GLSLES">shaders\shader_ripple.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\message_font</font>

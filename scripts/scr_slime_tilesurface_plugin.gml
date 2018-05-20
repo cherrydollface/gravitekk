@@ -7,6 +7,7 @@ if (layerdepth == 997) {
     obj.bg_y = argument4;
     obj.bg_w = argument5;
     obj.bg_h = argument6;
+    obj.rescan_boundaries = true;
     return 4;
 }
 return 0;
