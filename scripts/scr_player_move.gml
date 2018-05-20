@@ -1,4 +1,4 @@
-if global.gamestate != STATE_GAME {
+if global.gameState != STATE_GAME {
     exit;
 }
 

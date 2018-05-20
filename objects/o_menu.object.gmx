@@ -29,7 +29,7 @@
 // Initializing global variables
 
 //room_goto("startMenu");
-global.gameState = STATE_MENU;
+global.gamestate = STATE_MENU;
 
 
 //scr_unpause_game();
