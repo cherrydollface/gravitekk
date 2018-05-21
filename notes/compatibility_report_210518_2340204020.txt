@@ -1,0 +1,41 @@
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Font message_font has been converted to font family Arial (Regular) - Font has been regenerated, small inconsistencies may occur
+Font pager_font has been converted to font family Arial (Regular) - Font has been regenerated, small inconsistencies may occur
+Converting GML script: ${project_dir}\objects\o_player\Other_8.gml
+Converted description /// @description  Snap it!
+
+Converting GML script: ${project_dir}\objects\o_tilesurfacer\Create_0.gml
+Converted description /// @description loop through room and find tile of -5 depth and create a collision object.
+
+Converting GML script: ${project_dir}\objects\o_dialog_portraiit\Draw_0.gml
+Converted description /// @description  Draw window border and character talking
+
+Converting GML script: ${project_dir}\objects\o_pager\Step_0.gml
+Converted description /// @description  Scroll text
+
+Imported layer depths for room(s) 'bootcamp' were not adequately spaced. Unless updated this will have undefined results in game.
+Game speed set to 30
+Added compatibility script 'action/action_create_object.gml'
+Added compatibility script 'action/action_if_object.gml'
+Added compatibility script 'action/action_inherited.gml'
+Added compatibility script 'action/action_path_end.gml'
+Added compatibility script 'background/draw_background.gml'
+Added compatibility script 'background/draw_background_part.gml'
+Added compatibility script 'draw/draw_enable_alphablend.gml'
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'draw/draw_set_blend_mode_ext.gml'
+Added compatibility script 'draw/draw_set_colour_write_enable.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'tile/tile_delete.gml'
+Added compatibility script 'tile/tile_exists.gml'
+Added compatibility script 'tile/tile_get_background.gml'
+Added compatibility script 'tile/tile_get_height.gml'
+Added compatibility script 'tile/tile_get_left.gml'
+Added compatibility script 'tile/tile_get_top.gml'
+Added compatibility script 'tile/tile_get_width.gml'
+Added compatibility script 'tile/tile_layer_find.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'background/__init_background.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'
