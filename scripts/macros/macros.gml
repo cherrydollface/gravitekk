@@ -13,3 +13,31 @@
 #macro STATE_GAME 1
 #macro STATE_CUTSCENE 0
 #macro CELLSIZE 32
+
+//States
+#macro STATE_SAVE		3
+#macro STATE_LOAD		4
+#macro STATE_MENU_LOAD	5
+#macro STATE_MENU		7
+
+//Cell variables
+#macro SPACE_BETWEEN_POSITIONS 64
+
+//Main menu position
+#macro MENU_MAIN_START	1
+#macro MENU_MAIN_ABOUT	2
+#macro MENU_PAUSE_RESUME 3
+#macro MENU_PAUSE_SAVE	4
+#macro MENU_LOAD		5
+#macro MENU_QUIT		6
+#macro MENU_X_POSITION	64
+#macro MENU_Y_POSITION	96
+
+//Save games
+#macro SLOTS_FOR_SAVEGAME 4
+#macro CURRENT_SAVE_SLOT None
+
+//Player input 
+#macro PLAYER_INPUT_ENABLED 1
+#macro PLAYER_INPUT_DISABLED 0
+
