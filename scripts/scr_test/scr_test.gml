@@ -1,6 +1,9 @@
 //This is a junk script for testing different things
 show_debug_message("Button are work")
 
+
+var i = scr_read_value_from_file("Save 0.txt","Save time", "time");
+show_debug_message(i);
 //show_debug_message(global.test)
 
 //show_debug_message("Game state")

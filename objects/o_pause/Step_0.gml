@@ -27,162 +27,113 @@ if keyboard_check_pressed(ord("P"))                                             
    show_debug_message(global.gameState)                                         //
    }                                                                            //
 //////////////////////////////////////////////////////////////////////////////////
-   
-   
-// Menu positions
-//var touple;
-//for(var value = 0; value < )
 
-   
 // Pause
 if(global.gameState == STATE_PAUSE){
-    var xPostition = MENU_X_POSITION + SPACE_BETWEEN_POSITIONS;
-    var xMaxRangePosition = xPostition + CELLSIZE * 6;
-    var i = 0, y_pos = MENU_Y_POSITION;
-    var shift = 32;
-         if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (0 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (1 * SPACE_BETWEEN_POSITIONS) - shift)){
+	//Create rectangle x and y start positions [n] and y final position [n + 1]
+	var xPos = scr_get_menu_x_positions();
+	var yPos = scr_get_menu_y_positions(PAUSE_MENU_POSITIONS_LIMIT) 
+	
+	if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
             if(mouse_check_button_pressed (mb_left)){
             scr_unpause_game();
             }} // Resume
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (1 * SPACE_BETWEEN_POSITIONS)
-     - shift, xMaxRangePosition, y_pos + (2 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
             if(mouse_check_button_pressed (mb_left)){
             global.playerInput = PLAYER_INPUT_DISABLED;
             global.gameState = STATE_SAVE;
             }} // Save
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (2 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (3 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
             if(mouse_check_button_pressed (mb_left)){
             global.playerInput = PLAYER_INPUT_DISABLED;
             global.gameState = STATE_LOAD;
             }} // Load
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (3 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (4 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
             if(mouse_check_button_pressed (mb_left)){
-            }} // Option
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (4 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (5 * SPACE_BETWEEN_POSITIONS) - shift)){
+            }} // Option 
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[8], xPos[1], yPos[9])){
             if(mouse_check_button_pressed (mb_left)){
-            game_end()
+            game_end();
             }} // Quit
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (5 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (6 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[10], xPos[1], yPos[11])){
             if(mouse_check_button_pressed (mb_left)){
+				show_debug_message("Test");
             scr_test();
             }} //This is the test BUTTON!  
 }
             
 // Save
-
-
 if ((global.gameState == STATE_SAVE) & (global.playerInput == PLAYER_INPUT_ENABLED)){
-    var xPostition = MENU_X_POSITION + SPACE_BETWEEN_POSITIONS;
-    var xMaxRangePosition = xPostition + CELLSIZE * 6;
-    var i = 0, y_pos = MENU_Y_POSITION;
-    var shift = 32;
-         if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (0 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (1 * SPACE_BETWEEN_POSITIONS) - shift)){
-            if(mouse_check_button_pressed (mb_left))
-            {
-            CURRENT_SAVE_SLOT = "0"
-            scr_save();
+	var xPos = scr_get_menu_x_positions();
+	var yPos = scr_get_menu_y_positions(SLOTS_FOR_SAVES);
+	
+	if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
+            if(mouse_check_button_pressed (mb_left)){
+            scr_save(0);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (1 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (2 * SPACE_BETWEEN_POSITIONS) - shift)){
-            if(mouse_check_button_pressed (mb_left))
-            {
-            CURRENT_SAVE_SLOT = "1"
-            scr_save();
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
+            if(mouse_check_button_pressed (mb_left)){
+            scr_save(1);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (2 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (3 * SPACE_BETWEEN_POSITIONS) - shift)){
-            if(mouse_check_button_pressed (mb_left))
-            {
-            CURRENT_SAVE_SLOT = "2"
-            scr_save();
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
+            if(mouse_check_button_pressed (mb_left)){
+            scr_save(2);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (3 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (4 * SPACE_BETWEEN_POSITIONS) - shift)){
-            if(mouse_check_button_pressed (mb_left))
-            {
-            CURRENT_SAVE_SLOT = "3"
-            scr_save();
+	 else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
+            if(mouse_check_button_pressed (mb_left)){
+            scr_save(3);
             }}  
 }   
 
 // Load
-
 if (((global.gameState == STATE_LOAD) || (global.gameState == STATE_MENU_LOAD)) & (global.playerInput == PLAYER_INPUT_ENABLED)){
-    var xPostition = MENU_X_POSITION + SPACE_BETWEEN_POSITIONS;
-    var xMaxRangePosition = xPostition + CELLSIZE * 6;
-    var i = 0, y_pos = MENU_Y_POSITION;
-    var shift = 32;
-         if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (0 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (1 * SPACE_BETWEEN_POSITIONS) - shift)){
+	var xPos = scr_get_menu_x_positions();
+	var yPos = scr_get_menu_y_positions(SLOTS_FOR_SAVES);
+		
+	if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
             if(mouse_check_button_pressed (mb_left))
             {
-            CURRENT_SAVE_SLOT = "0"
-            scr_load();
-            global.gameState = STATE_PAUSE;
+            scr_load(0);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (1 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (2 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
             if(mouse_check_button_pressed (mb_left))
             {
-            CURRENT_SAVE_SLOT = "1"
-            scr_load();
-            global.gameState = STATE_PAUSE;
+            scr_load(1);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (2 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (3 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
             if(mouse_check_button_pressed (mb_left))
             {
-            CURRENT_SAVE_SLOT = "2"
-            scr_load();
-            global.gameState = STATE_PAUSE;
+            scr_load(2);
             }}
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (3 * SPACE_BETWEEN_POSITIONS)
-         - shift, xMaxRangePosition, y_pos + (4 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
             if(mouse_check_button_pressed (mb_left))
             {
-            CURRENT_SAVE_SLOT = "3"
-            scr_load();
-            global.gameState = STATE_PAUSE;
-            }}}
+            scr_load(3);
+            }}
+			}
             
-// Main menu
-            
+// Main menu    
 if (global.gameState == STATE_MENU){
-    var xPostition = MENU_X_POSITION + SPACE_BETWEEN_POSITIONS;
-    var xMaxRangePosition = xPostition + CELLSIZE * 6;
-    var i = 0, y_pos = MENU_Y_POSITION;
-    var shift = 32;
-            if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (0 * SPACE_BETWEEN_POSITIONS)
-            - shift, xMaxRangePosition, y_pos + (1 * SPACE_BETWEEN_POSITIONS) - shift)){
+	var xPos = scr_get_menu_x_positions();
+	var yPos = scr_get_menu_y_positions(PAUSE_MENU_POSITIONS_LIMIT);
+
+	if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
             if(mouse_check_button_pressed (mb_left)){
             global.gameState = STATE_GAME;
-            room_goto_next();
+            room_goto(mission1);
             }} // Start game
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (1 * SPACE_BETWEEN_POSITIONS)
-            - shift, xMaxRangePosition, y_pos + (2 * SPACE_BETWEEN_POSITIONS) - shift)){
+   else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
             if(mouse_check_button_pressed (mb_left)){
                 global.playerInput = PLAYER_INPUT_DISABLED;
-                //global.gameState = STATE_LOAD;
                 global.gameState = STATE_MENU_LOAD;
             }} // Load
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (2 * SPACE_BETWEEN_POSITIONS)
-            - shift, xMaxRangePosition, y_pos + (3 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
             if(mouse_check_button_pressed (mb_left)){
-            global.gameState = STATE_GAME;
             }} // About
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (3 * SPACE_BETWEEN_POSITIONS)
-            - shift, xMaxRangePosition, y_pos + (4 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
             if(mouse_check_button_pressed (mb_left)){
-            global.gameState = STATE_GAME;
             }} // Option
-    else if(point_in_rectangle(mouse_x, mouse_y, xPostition, y_pos + (4 * SPACE_BETWEEN_POSITIONS)
-            - shift, xMaxRangePosition, y_pos + (5 * SPACE_BETWEEN_POSITIONS) - shift)){
+	else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[8], xPos[1], yPos[9])){
             if(mouse_check_button_pressed (mb_left)){
             game_end()
             }} // Quit

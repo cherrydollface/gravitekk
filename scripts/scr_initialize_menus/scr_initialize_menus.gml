@@ -1,16 +1,14 @@
 
-for ( var i = 0; i < SLOTS_FOR_SAVEGAME; i ++){
-    str = "Save {i}.txt" // Basic filename of savegame
-    requestedFile = string_replace(str, "{i}", string(i)); // Formatted file
+for ( var i = 0; i < SLOTS_FOR_SAVES; i ++){
+	requestedFile = scr_string_replace("Save {}.txt", i)
     
     if file_exists(requestedFile){ 
-        var name, file, j = 0;
-        ini_open(requestedFile);
-        name = ini_read_string( "Room section", "name", "room = " ) + ini_read_string( "Save time", "time", " " );
-        
-        ini_close();
-        global.savedGames[i] = name;
+		nameAndDate = scr_read_values_from_file(requestedFile, "Room section", "name", "Save time", "time");
+		
+        //ini_close();
+        global.savedGames[i] = nameAndDate;
     } 
     else { 
-        global.savedGames[i] = "Free";}
+        global.savedGames[i] = "Free";
+		}
 }
