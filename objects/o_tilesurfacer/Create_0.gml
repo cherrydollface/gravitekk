@@ -6,6 +6,10 @@ for (var xx = 0; xx <= room_width; xx += CELLSIZE)
         }
     }
 
+bloodfilth_surf = surface_create(room_width, room_height);
+surface_set_target(bloodfilth_surf);
+draw_clear_alpha(0, 0);
+surface_reset_target();
 
 // Number of surfaces to divide the room into,
 // lengthways and widthways.
@@ -39,10 +43,19 @@ surface_width = room_width / surfaces_w;
 surface_height = room_height / surfaces_h;
 
 var i, j;
-// Create the surfaces
+
+// Create the normal surfaces
 for (i = 0; i < surfaces_w; i += 1) {
     for (j = 0; j < surfaces_h; j += 1) {
         surf[i, j] = surface_create(surface_width, surface_height);
+        surface_set_target(surf[i, j]);
+        draw_clear_alpha(0, 0);
+        surface_reset_target()
+
+		// Create the most lower surfaces (ground, dirt, etc)
+		// blood and filth will be drawn above it
+
+		surf_ground[i, j] = surface_create(surface_width, surface_height);
         surface_set_target(surf[i, j]);
         draw_clear_alpha(0, 0);
         surface_reset_target()
@@ -59,7 +72,12 @@ do {
     // Copy all the tiles to the corresponding surface
     for (i = 0; i < surfaces_w; i += 1) {
         for (j = 0; j < surfaces_h; j += 1) {
-            surface_set_target(surf[i, j]);
+			if(layerdepth != 1000000) {
+				surface_set_target(surf[i, j]);
+			} else {
+				surface_set_target(surf_ground[i, j]);
+			}
+            
             // Since tile_layer_find() is the only way to access room tiles,
             // we must sweep over the entire room.
             for (xx = surface_width * i; xx < (surface_width * (i + 1)); xx += tilewidth) {
@@ -80,14 +98,13 @@ do {
                         var pl_res = scr_slime_tilesurface_plugin(layerdepth, xx, yy, l, p, w, h);
                         
                         if (layerdepth < 1000) { 
-                             draw_set_colour_write_enable(true, true, true, false)
+                             //draw_set_colour_write_enable(true, true, true, false)
                             //draw_enable_alphablend(false); 
                             //draw_set_blend_mode_ext(bm_one, bm_one);    
                         }
                         if(pl_res == 0) {
                             draw_background_part(b, l, p, w, h, xx - (surface_width * i), yy - (surface_height * j));
                         }
-
                         
                         draw_set_blend_mode(bm_normal);    
                         draw_enable_alphablend(true);
