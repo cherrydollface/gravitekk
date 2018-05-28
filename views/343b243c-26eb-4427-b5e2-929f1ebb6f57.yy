@@ -7,7 +7,7 @@
         "e9dc30b6-bb2e-4008-827c-c325ae04501b"
     ],
     "filterType": "GMScript",
-    "folderName": "Plugins",
+    "folderName": "Tile Surfacer Addons",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
