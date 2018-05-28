@@ -352,6 +352,14 @@
             }
         },
         {
+            "Key": "48825dd8-ffff-4a94-850e-9569161ce93f",
+            "Value": {
+                "id": "97755ed3-c505-4b5a-a0ee-5145752ac160",
+                "resourcePath": "sprites\\sprite_bloodsplat1\\sprite_bloodsplat1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "48c25de5-76a8-4b2c-bc92-05f71d5e7e2b",
             "Value": {
                 "id": "468829e4-aff2-4df7-af4f-c0dea4d16166",
@@ -680,14 +688,6 @@
             }
         },
         {
-            "Key": "935028f7-cec0-4993-9bcd-e83733252917",
-            "Value": {
-                "id": "b52e25c1-cb2d-44da-9ebd-e50a579a396d",
-                "resourcePath": "views\\935028f7-cec0-4993-9bcd-e83733252917.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "94d7bf9c-edd0-4f92-b480-c560eb0cdd8b",
             "Value": {
                 "id": "8b6437b5-c279-41b3-88dc-a9224985ae1c",
@@ -797,14 +797,6 @@
                 "id": "f5478e9d-9419-4ed8-b9bd-3a456716ad84",
                 "resourcePath": "fonts\\message_font\\message_font.yy",
                 "resourceType": "GMFont"
-            }
-        },
-        {
-            "Key": "ad9972b3-744e-45cd-ba17-eac7784c2c2e",
-            "Value": {
-                "id": "0874f793-9e60-4289-bfa0-9306777e54c5",
-                "resourcePath": "scripts\\scr_redraw_slime_borders\\scr_redraw_slime_borders.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1221,7 +1213,6 @@
         "f6fd47af-d621-4c07-bf00-f4f88d16193a",
         "2f8da2a2-0641-4a83-b48f-3b4989e3c2e3",
         "e9dc30b6-bb2e-4008-827c-c325ae04501b",
-        "ad9972b3-744e-45cd-ba17-eac7784c2c2e",
         "4090403d-4eef-4285-93b2-ad4759b68441",
         "dc2d74d2-fcfd-44a1-9265-c5d27e311754",
         "94d7bf9c-edd0-4f92-b480-c560eb0cdd8b",
