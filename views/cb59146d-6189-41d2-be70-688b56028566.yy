@@ -12,7 +12,7 @@
         "5efa1ea7-0aca-43e2-bd78-9820a6023dab"
     ],
     "filterType": "GMScript",
-    "folderName": "Services",
+    "folderName": "Utils",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

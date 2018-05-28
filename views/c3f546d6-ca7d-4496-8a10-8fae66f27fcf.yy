@@ -10,7 +10,7 @@
         "cf007c0d-d9ca-4d02-90e1-8d7d520c27e9"
     ],
     "filterType": "GMScript",
-    "folderName": "I\/O",
+    "folderName": "Disk I\/O",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

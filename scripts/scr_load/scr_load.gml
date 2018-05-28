@@ -12,7 +12,7 @@ room_goto(scr_read_value_from_file(csf_txt, "Room section", "index"))
 
 /// Load location of the object and global variables
 // Disabled before i find normal way to save game
-//game_load(csf_dat)
+game_load(csf_dat)
 
 /// Entering pause status for prevent game collision of the saved global pause state
 scr_pause_game()

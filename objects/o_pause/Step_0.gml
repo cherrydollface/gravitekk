@@ -34,6 +34,19 @@ if(global.gameState == STATE_PAUSE){
 	var xPos = scr_get_menu_x_positions();
 	var yPos = scr_get_menu_y_positions(PAUSE_MENU_POSITIONS_LIMIT) 
 	
+	// var buttonlist = ds_list( 
+	//   (x1, y1, x2, y2, index1),
+	//   (x1, y1, x2, y2, index1),
+	// )
+	//  for(i = 0; i ++; i < buttonList.size ) {
+	//		var buttonInfo = buttonList[i];
+	//		if 	if(point_in_rectangle(mouse_x, mouse_y, buttonInfo.x1, buttonInfo.y1 )){
+	// }
+	//
+	
+	// todo try to move to MouseClick event
+	
+	
 	if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
             if(mouse_check_button_pressed (mb_left)){
             scr_unpause_game();

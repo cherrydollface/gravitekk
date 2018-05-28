@@ -1,6 +1,7 @@
 // Pause menu 
 scr_global_variables();
 
+// todo create ini file with menu localization
 // Available selections in pause menu
 pauseMenu[0] = "Resume";
 pauseMenu[1] = "Save"; 

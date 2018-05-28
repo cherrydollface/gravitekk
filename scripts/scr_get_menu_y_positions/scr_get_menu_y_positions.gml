@@ -5,6 +5,7 @@ y_pos = MENU_Y_POSITION;
 var xPostition = MENU_X_POSITION + SPACE_BETWEEN_POSITIONS;
 var xMaxRangePosition = xPostition + CELLSIZE * 6;
 	
+// todo magic number	
 shift = 32;
 positions = 0;
 
