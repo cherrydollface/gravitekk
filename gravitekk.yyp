@@ -247,14 +247,6 @@
             }
         },
         {
-            "Key": "3bc94b7c-e159-43f7-955a-29ad869807f5",
-            "Value": {
-                "id": "0a655d17-f82e-4d8c-b256-dda91ea448bf",
-                "resourcePath": "scripts\\@__global_object_depths\\__global_object_depths.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "4090403d-4eef-4285-93b2-ad4759b68441",
             "Value": {
                 "id": "4cd1ae46-c0a4-485a-8cfb-25665eab7e33",
@@ -679,14 +671,6 @@
             }
         },
         {
-            "Key": "a6d1a22c-0283-408d-97f5-fa592d73c80e",
-            "Value": {
-                "id": "7d922e62-c1c7-4e4f-a3f3-2984fa972fa7",
-                "resourcePath": "scripts\\@__init_global\\__init_global.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "acbc3081-0fce-45f0-8759-7bfc7b4a4823",
             "Value": {
                 "id": "f5478e9d-9419-4ed8-b9bd-3a456716ad84",
@@ -879,6 +863,14 @@
             }
         },
         {
+            "Key": "e8310105-096a-4286-93cd-4ba3e6df618b",
+            "Value": {
+                "id": "3fe95bf9-aaa3-4f8f-bab8-8b628204be42",
+                "resourcePath": "rooms\\TestRoom\\TestRoom.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "e9609af8-a10d-4884-9338-2519f2203624",
             "Value": {
                 "id": "aad8cab1-1609-4ae0-8da1-34186b1f12a8",
@@ -1037,8 +1029,6 @@
         "399e9ebd-e92e-4162-a680-d4b1ce06be6b",
         "0d7cdbcb-2150-4086-9d84-3123c4061c33",
         "e0532fc5-8e21-4381-b701-b3d6e0a8568e",
-        "a6d1a22c-0283-408d-97f5-fa592d73c80e",
-        "3bc94b7c-e159-43f7-955a-29ad869807f5",
         "066a1e24-b211-4d98-9318-03d212e2d096",
         "2f8da2a2-0641-4a83-b48f-3b4989e3c2e3"
     ],

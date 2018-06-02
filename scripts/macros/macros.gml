@@ -13,3 +13,9 @@
 #macro STATE_GAME 1
 #macro STATE_CUTSCENE 0
 #macro CELLSIZE 32
+#macro LAYER_GROUND "Ground" 
+#macro LAYER_AUX1 "Aux1"
+#macro LAYER_SLIME "Slime"
+#macro LAYER_AUX2 "Aux2"
+#macro LAYER_SOLID "Solid"
+#macro LAYER_OVERLAYS "Overlays"

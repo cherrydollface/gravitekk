@@ -25,11 +25,12 @@ var layers;
 layers = ds_queue_create();
 // Must be in descending order
 
-ds_queue_enqueue(layers, 1000000);
-ds_queue_enqueue(layers, 999);
-ds_queue_enqueue(layers, 997);
-ds_queue_enqueue(layers, 996);
-
+ds_queue_enqueue(layers, LAYER_GROUND);
+ds_queue_enqueue(layers, LAYER_AUX1);
+ds_queue_enqueue(layers, LAYER_SLIME);
+ds_queue_enqueue(layers, LAYER_AUX2);
+ds_queue_enqueue(layers, LAYER_SOLID);
+ds_queue_enqueue(layers, LAYER_OVERLAYS);
 
 
 // Assumes that the tiles in a room are in a regular grid,
@@ -56,14 +57,11 @@ for (i = 0; i < surfaces_w; i += 1) {
 		// blood and filth will be drawn above it
 
 		surf_ground[i, j] = surface_create(surface_width, surface_height);
-        surface_set_target(surf[i, j]);
+        surface_set_target(surf_ground[i, j]);
         draw_clear_alpha(0, 0);
         surface_reset_target()
     }
 }
-
-var count;
-count = 0;
 
 do {
     // For each tile layer
@@ -72,46 +70,36 @@ do {
     // Copy all the tiles to the corresponding surface
     for (i = 0; i < surfaces_w; i += 1) {
         for (j = 0; j < surfaces_h; j += 1) {
-			if(layerdepth != 1000000) {
+
+			if(layerdepth != LAYER_GROUND) {
 				surface_set_target(surf[i, j]);
 			} else {
 				surface_set_target(surf_ground[i, j]);
 			}
             
-            // Since tile_layer_find() is the only way to access room tiles,
-            // we must sweep over the entire room.
             for (xx = surface_width * i; xx < (surface_width * (i + 1)); xx += tilewidth) {
                 for (yy = surface_height * j; yy < (surface_height * (j + 1)); yy += tileheight) {
                     var t;
-                    t = tile_layer_find(layerdepth, xx, yy);
-                    if (tile_exists(t)) {
-                        var b;
-                        b = tile_get_background(t);
-                        var l;
-                        l = tile_get_left(t);
-                        var p;
-                        p = tile_get_top(t);
-                        var w;
-                        w = tile_get_width(t);
-                        var h;
-                        h = tile_get_height(t);
-                        var pl_res = scr_slime_tilesurface_plugin(layerdepth, xx, yy, l, p, w, h);
+					var ll = layer_get_id(layerdepth);
+					if ll = -1 continue;
+					var lt = layer_tilemap_get_id(ll);
+					if lt = -1 continue;
+                    t = tilemap_get_at_pixel(lt, xx, yy);
+                    if (!tile_get_empty(t)) {
+
+						var pl_res = scr_slime_tilesurface_plugin(layerdepth, xx, yy, tilemap_get_tileset(lt), t);
                         
-                        if (layerdepth < 1000) { 
-                             //draw_set_colour_write_enable(true, true, true, false)
-                            //draw_enable_alphablend(false); 
-                            //draw_set_blend_mode_ext(bm_one, bm_one);    
+                        if (layerdepth == LAYER_GROUND) {                              
+                            draw_set_blend_mode_ext(bm_one, bm_one);    
                         }
-                        if(pl_res == 0) {
-                            draw_background_part(b, l, p, w, h, xx - (surface_width * i), yy - (surface_height * j));
-                        }
+
+						if(pl_res == 0) {
+							draw_tile(tilemap_get_tileset(lt), t, 0, xx - (surface_width * i), yy - (surface_height * j));
+						}
                         
-                        draw_set_blend_mode(bm_normal);    
-                        draw_enable_alphablend(true);
-                        draw_set_colour_write_enable(true, true, true, true)
-                            
-                        tile_delete(t);
-                        count += 1;
+						var empty_tile_data = tile_set_empty(t);
+						// delete the file
+						tilemap_set_at_pixel(lt, empty_tile_data, xx, yy);
                     }
                 }
             }

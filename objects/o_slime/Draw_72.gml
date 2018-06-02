@@ -2,7 +2,8 @@ if(rescan_boundaries) {
     surface_set_target(surf);
     draw_clear_alpha(0, 0);
 
-    draw_background_part(test_tileset1, bg_x, bg_y, bg_w, bg_h, 0, 0);
+   // draw_background_part(test_tileset1, bg_x, bg_y, bg_w, bg_h, 0, 0);
+    draw_tile(slime_tileset, slime_tile, 0, 0, 0);
  
     if (instance_position(x + 5, y - CELLSIZE * 0.5, o_slime) == noone) {
         // apply mask
@@ -30,8 +31,7 @@ if(rescan_boundaries) {
     
     if (instance_position(x + 5, y + CELLSIZE * 1.5 , o_slime) == noone) {
         // apply mask
-        draw_set_blend_mode_ext( bm_dest_color, bm_zero );
-          
+        draw_set_blend_mode_ext( bm_dest_color, bm_zero );          
         draw_sprite(sprite_slime_border_mask, MASK_BOTTOM,  0, 0);
         draw_set_blend_mode_ext(bm_src_alpha, bm_inv_src_alpha );
     }
