@@ -1,2 +1,3 @@
 /// @description Insert description here
-// You can write your code in this editor
+// This overrides default draw behavior
+// Kinda hack to make invisible solid object

@@ -8,9 +8,9 @@ lookup_height_cells = 2;
 
 script_execute(world.messager_script);
 
-portait = instance_create(x + (lookup_width_cells + 1) *CELLSIZE, y, o_dialog_portraiit)
+portait = instance_create_layer(x + (lookup_width_cells + 1) *CELLSIZE, y, LAYER_DEFAULT_UI, o_dialog_portraiit)
 
-skipButton = instance_create(x, y, o_skip_button);
+skipButton = instance_create_layer(x, y, LAYER_DEFAULT_UI, o_skip_button);
 skipButton.tag_id = self;
 
 

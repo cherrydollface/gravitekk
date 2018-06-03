@@ -10,7 +10,7 @@ if (!object_exists(argument0)) {
 
 if (global.__argument_relative)
 {
-	instance_create( x+argument1, y+argument2, argument0);
+	instance_create_layer( x+argument1, y+argument2, LAYER_DEFAULT_OBJECT, argument0);
 } else {
-	instance_create( argument1, argument2, argument0);
+	instance_create_layer( argument1, argument2, LAYER_DEFAULT_OBJECT, argument0);
 }

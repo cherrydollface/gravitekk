@@ -19,4 +19,6 @@
 #macro LAYER_AUX2 "Aux2"
 #macro LAYER_SOLID "Solid"
 #macro LAYER_OVERLAYS "Overlays"
-#macro LAYER_DEFAULT_OBJECT "Main"
+#macro LAYER_SERVICE_TILESURFACER "TileSurfacer"
+#macro LAYER_DEFAULT_OBJECT "Instances"
+#macro LAYER_DEFAULT_UI "UI"
