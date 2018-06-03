@@ -791,14 +791,6 @@
             }
         },
         {
-            "Key": "e52dbb35-9876-4dfd-8200-d706aa391362",
-            "Value": {
-                "id": "6b2b02b1-a84e-4d5a-aeb5-78268f57b318",
-                "resourcePath": "scripts\\@draw_background_part\\draw_background_part.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "e6255bb2-068f-4969-9b08-1f8c5ec7b840",
             "Value": {
                 "id": "48bc484e-c9e2-42a3-8fd3-3e4e86ca315a",
@@ -958,14 +950,12 @@
         "e4545863-f61c-49c3-9880-0d5415df390e",
         "906ad9ce-c049-432c-a686-a497163f2787",
         "f6fd47af-d621-4c07-bf00-f4f88d16193a",
-        "e9dc30b6-bb2e-4008-827c-c325ae04501b",
         "4090403d-4eef-4285-93b2-ad4759b68441",
         "dc2d74d2-fcfd-44a1-9265-c5d27e311754",
         "94d7bf9c-edd0-4f92-b480-c560eb0cdd8b",
         "57ed978e-bcfa-446f-80f6-ea7ee702d5f4",
         "5b389eed-37f9-4c3c-a6d4-b493bb288ce9",
         "8c914d38-f22b-4687-94a6-46d932c2bd60",
-        "e52dbb35-9876-4dfd-8200-d706aa391362",
         "ef8e059b-7916-48b6-9b17-b729fd0559fe",
         "958f77d8-46b7-4952-94f1-6f00aee37c6a",
         "fd496d54-c87d-469d-b2f2-a69ce67001ae",
@@ -976,6 +966,7 @@
         "7237f33d-3017-4923-8696-2f989dd7bdec",
         "60626a64-e7b8-4da2-9880-a5afbe9bf1a2",
         "7a5feb73-3c12-4b85-abf7-9ea0c46c3cff",
+        "e9dc30b6-bb2e-4008-827c-c325ae04501b",
         "6fe65a0d-bd0b-4bb3-9bde-b4fcbf0efd3e",
         "0a6b5a76-258d-48a6-8bd0-0d02831115e6"
     ],
