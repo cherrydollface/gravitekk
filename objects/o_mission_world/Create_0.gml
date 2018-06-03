@@ -6,3 +6,6 @@ sequence_index = -1;
 tilesurfacer = instance_create_layer(0, 0, LAYER_SERVICE_TILESURFACER, o_tilesurfacer);
 pager = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_pager);
 bloodsack = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_bloodsack);
+menu = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_menu);
+pause = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_pause);
+

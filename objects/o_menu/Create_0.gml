@@ -1,0 +1,1 @@
+global.gameState = STATE_MENU;
