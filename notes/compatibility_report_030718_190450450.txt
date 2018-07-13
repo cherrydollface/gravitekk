@@ -1,0 +1,29 @@
+Converting GML script: ${project_dir}\scripts\regular_expression_create\regular_expression_create.gml
+Converted description /// @description  regular_expression_create(regular expression)/// @param regular expression
+Converted string - line 62: '"^"' -> "\"^\""
+Converted string - line 95: "\" -> "\\"
+Converted string - line 99: "\" -> "\\"
+Converted string - line 170: "\" -> "\\"
+Converted string - line 229: "\0" -> "\\0"
+Converted string - line 229: "\1" -> "\\1"
+Converted string - line 236: "\2" -> "\\2"
+
+Converting GML script: ${project_dir}\scripts\regular_expression_destroy\regular_expression_destroy.gml
+Converted description /// @description  regular_expression_destroy(compiled regular expression)/// @param compiled regular expression
+
+Converting GML script: ${project_dir}\scripts\regular_expression_match\regular_expression_match.gml
+Converted description /// @description  regular_expression_match(compiled regular expression, input string)/// @param compiled regular expression
+/// @param  input string
+Converted string - line 27: "\" -> "\\"
+
+Font ft_example has been converted to font family Arial (Bold) - Font has been regenerated, small inconsistencies may occur
+Converting GML script: ${project_dir}\objects\obj_example\Create_0.gml
+Converted string - line 2: "(\a-z|\0-9|_|.)\+@(\a-z|\0-9)\+.(com|net)" -> "(\\a-z|\\0-9|_|.)\\+@(\\a-z|\\0-9)\\+.(com|net)"
+
+Converting GML script: ${project_dir}\objects\obj_example\Draw_0.gml
+Converted string - line 9: '"' -> "\""
+Converted string - line 9: '"' -> "\""
+
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script '__global_object_depths.gml'

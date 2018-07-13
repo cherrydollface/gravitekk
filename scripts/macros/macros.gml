@@ -6,13 +6,18 @@
 #macro MASK_RIGHT 2
 #macro MASK_TOP 1
 #macro MASK_LEFT 0
+
 #macro BGSTATE_FADE_IN 2
 #macro BGSTATE_FADE_OUT 1
 #macro BGSTATE_IDLE 0
+
+#macro STATE_TRANSITION 4
 #macro STATE_PAUSE 2
 #macro STATE_GAME 1
 #macro STATE_CUTSCENE 0
 #macro CELLSIZE 32
+
+// MISSION LAYERS
 #macro LAYER_GROUND "Ground" 
 #macro LAYER_AUX1 "Aux1"
 #macro LAYER_SLIME "Slime"
@@ -22,3 +27,30 @@
 #macro LAYER_SERVICE_TILESURFACER "TileSurfacer"
 #macro LAYER_DEFAULT_OBJECT "Instances"
 #macro LAYER_DEFAULT_UI "UI"
+
+// NOVEL LAYERS
+#macro LAYER_CHARACTERS "Characters"
+
+#macro NOVELL_TRIGGER_SERVICE_MESSAGE "!trigger"
+
+// CONTENTS
+
+#macro CHAPTER_PROLOGUE 0
+#macro CHAPTER_1 1
+#macro MISSION_1 2
+#macro CHAPTER_2 3
+#macro CHAPTER_3 4
+#macro MISSION_2 5
+#macro CHAPTER_4 6
+#macro MISSION_3 7
+#macro CHAPTER_5 8
+#macro CHAPTER_6 9
+#macro MISSION_4 10
+#macro CHAPTER_7 11
+#macro CHAPTER_8 12
+#macro CHAPTER_9 13
+#macro MISSION_5 14
+#macro CHAPTER_10 15
+#macro CHAPTER_11 16
+#macro CHAPTER_12 17
+#macro CHAPTER_13 18

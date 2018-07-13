@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace gravitekk_codegen.Parsers {
 	class NarratorTextParser : IParser {
 
-		private Regex regex = new Regex("\"(.+)\"");
+		private Regex regex = new Regex("^\"(.+)\"");
 
-		public bool TryParse(string input, int linenumber, out GeneratedCodeChunk output)
+		public bool TryParse(string input, int linenumber, out IEnumerable<GeneratedCodeChunk> output)
 		{
 			output = null;
 			if (!regex.IsMatch(input))
@@ -20,12 +20,13 @@ namespace gravitekk_codegen.Parsers {
 
 			var message = regex.Match(input).Groups[1].Value;
 
-			output = new GeneratedCodeChunk
+			var singleOutput = new GeneratedCodeChunk
 			{
 				GeneratedCodeTarget = GeneratedCodeTarget.MessageConstructor,
 				GeneratedCode = new List<string> {$"ds_queue_enqueue(messages, \"{message}\");"}
 			};
 
+			output = new List<GeneratedCodeChunk> {singleOutput};
 			return true;
 		}
 	}

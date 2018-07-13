@@ -34,60 +34,24 @@ namespace gravitekk_codegen
 			var parsers = new List<IParser>
 			{
 				new NarratorTextParser(),
-				new BgChangeParser()
+				new BgChangeParser(),
+				new CreateCharacterParser(),
+				new CharacterDialogueParser(),
+				new CharacterMoveLeftParser(),
+				new SetCharacterActiveParser(),
+				new DestroyCharacterParser()
 			};
 
 			string line;
 			int linenumber = 0;
-			int messageLineNumber = 0;
+			int eventNumber = 0;
 
 			// preprocess
 			var stream = new StreamWriter(new MemoryStream());
 
-			bool openBracket = false;
-			int openBracketLine = 0;
-			int preproLine = 0;
-
-			var acc = string.Empty;
-
-			using (var s = File.OpenText(args[0]))
+			if (!Preprocessor.Preprocess(stream, args[0]))
 			{
-				while ((line = s.ReadLine()) != null)
-				{
-					preproLine++;
-
-					var trimmnedLine = line.Trim();
-
-					if (String.IsNullOrEmpty(trimmnedLine)) continue;
-					if (trimmnedLine.StartsWith("//")) continue;
-
-					if (trimmnedLine.StartsWith("\"") && (!trimmnedLine.EndsWith("\"")))
-					{
-						acc = acc + trimmnedLine;
-						openBracket = true;
-						openBracketLine = preproLine;
-					}
-					else
-					{
-						if (!trimmnedLine.StartsWith("\"") && (trimmnedLine.EndsWith("\"")))
-						{
-							acc = acc + trimmnedLine;
-							stream.WriteLine(acc);
-							acc = string.Empty;
-							openBracket = false;
-						}
-						else
-						{
-							acc = acc + trimmnedLine;
-							stream.WriteLine(trimmnedLine);
-						}
-					}
-				}
-			}
-			if (openBracket)
-			{
-				Console.WriteLine($"Error! Bracket opened on line {openBracketLine} and was not closed!");
-				return;
+				return;		
 			}
 
 			stream.Flush();
@@ -110,26 +74,32 @@ namespace gravitekk_codegen
 					var stringParsed = false;
 					foreach (var parser in parsers)
 					{
-						GeneratedCodeChunk chunk;
-						if (parser.TryParse(line.Trim(), messageLineNumber, out chunk))
+						IEnumerable<GeneratedCodeChunk> chunks;
+						if (parser.TryParse(line.Trim(), eventNumber, out chunks))
 						{
-							switch (chunk.GeneratedCodeTarget)
+							foreach (var chunk in chunks)
 							{
-								case GeneratedCodeTarget.MessageConstructor:
-									messageConstructorCode.AddRange(chunk.GeneratedCode);
-									break;
+								switch (chunk.GeneratedCodeTarget)
+								{
+									case GeneratedCodeTarget.MessageConstructor:
+									{
+										messageConstructorCode.AddRange(chunk.GeneratedCode);
+										break;
+									}
 
-								case GeneratedCodeTarget.EventHandler:
-									eventHandlerCode.AddRange(chunk.GeneratedCode);
-									break;
-
-								default:
-									break;
+									case GeneratedCodeTarget.EventHandler:
+									{
+										eventHandlerCode.AddRange(chunk.GeneratedCode);
+										break;
+									}
+									default:
+										break;
+								}
 							}
 							linenumber++;
-							if (parser is NarratorTextParser)
+							if(!(parser is NarratorTextParser || parser is CharacterDialogueParser))
 							{
-								messageLineNumber++;
+								eventNumber++;
 							}
 							stringParsed = true;
 							break;
@@ -150,10 +120,12 @@ namespace gravitekk_codegen
 
 			using (var s = new StreamWriter($"scr_{chapterPrefix}_event_handler.gml"))
 			{
-				s.WriteLine("switch(argument0) {");
-				eventHandlerCode.ForEach(c => s.WriteLine(c));
-				s.WriteLine("default : break;");
+				s.WriteLine("var world = instance_find(o_novel_world, 0);");
+				s.WriteLine("switch(world.worldEventCount) {"); 
+				eventHandlerCode.ForEach(c => s.WriteLine("\t" + c));
+				s.WriteLine("	default : break;");
 				s.WriteLine("}");
+				s.WriteLine("world.worldEventCount++;");
 			}
 		}
 	}

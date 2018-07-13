@@ -10,7 +10,7 @@ namespace gravitekk_codegen.Parsers {
 
 		private Regex regex = new Regex(@"bgchange\((.+)\)");
 
-		public bool TryParse(string input,int linenumber, out GeneratedCodeChunk output)
+		public bool TryParse(string input,int linenumber, out IEnumerable<GeneratedCodeChunk> output)
 		{
 			output = null;
 			if (!regex.IsMatch(input))
@@ -20,7 +20,7 @@ namespace gravitekk_codegen.Parsers {
 
 			var bg = regex.Match(input).Groups[1].Value;
 
-			output = new GeneratedCodeChunk
+			var singleOutput = new GeneratedCodeChunk
 			{
 				GeneratedCode = new List<string>
 				{
@@ -33,6 +33,8 @@ namespace gravitekk_codegen.Parsers {
 				},
 				GeneratedCodeTarget = GeneratedCodeTarget.EventHandler
 			};
+
+			output = new List<GeneratedCodeChunk> { singleOutput, Helper.GetTrigger() };
 
 			return true;
 		}

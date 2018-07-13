@@ -9,7 +9,8 @@
         "0f9a43b3-509e-43db-8bd2-d46a772f875e",
         "167a6887-03d3-4c03-90a7-630c26e9e0f6",
         "3ab50950-e0f4-49aa-8e38-99783d652365",
-        "b013d90c-3f5c-4c98-9e71-a80b70248e05"
+        "b013d90c-3f5c-4c98-9e71-a80b70248e05",
+        "acd5f036-f546-4ddc-8fb2-96f418fc1035"
     ],
     "filterType": "GMObject",
     "folderName": "mission",

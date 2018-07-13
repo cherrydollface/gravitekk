@@ -1,4 +1,5 @@
 var world = instance_find(o_mission_world, 0);
+
 if(world.sequence_index = 6) {
      //write your messages in an array, starting at 0, like so
     message[0] = "Лицо солдата - это его сапоги...";
@@ -11,3 +12,4 @@ if(world.sequence_index = 6) {
 } else {
     message[0] = "Unknown dialog sequence!"
 }
+
