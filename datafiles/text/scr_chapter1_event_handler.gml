@@ -49,6 +49,76 @@ switch(world.worldEventCount) {
 		bg.new_bg = bg_vending_machine;
 		bg.state = BGSTATE_FADE_OUT;
 		break;
+	case 11:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_cafeterium;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 12:
+		instance_create_layer( global.charRightX, global.charRightY, LAYER_CHARACTERS, o_char_eric );
+		break;
+	case 13:
+		instance_create_layer( global.charLeftX, global.charLeftY, LAYER_CHARACTERS, o_char_nancy );
+		break;
+	case 14:
+		scr_char_set_active(instance_find(o_char_eric, 0));
+		break;
+	case 15:
+		scr_char_set_active(instance_find(o_char_nancy, 0));
+		break;
+	case 16:
+		scr_char_set_active(instance_find(o_char_eric, 0));
+		break;
+	case 17:
+		scr_char_set_active(instance_find(o_char_nancy, 0));
+		break;
+	case 18:
+		scr_char_set_active(instance_find(o_char_eric, 0));
+		break;
+	case 19:
+		with instance_find(o_char_eric,0) do 
+		{
+			destroying = true;
+			global.gamestate = STATE_TRANSITION
+		}
+		break;
+	case 20:
+		with instance_find(o_char_nancy,0) do 
+		{
+			destroying = true;
+			global.gamestate = STATE_TRANSITION
+		}
+		break;
+	case 21:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_transport_pad;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 22:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_way_to_hangars;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 23:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_palm;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 24:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_way_to_hangars;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 25:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_hangars;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
+	case 26:
+		var bg = instance_find(o_bg, 0);
+		bg.new_bg = bg_cockpit;
+		bg.state = BGSTATE_FADE_OUT;
+		break;
 	default : break;
 }
 world.worldEventCount++;

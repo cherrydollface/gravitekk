@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "03529e1e-e584-48a9-95d6-8f3d1e07c55a",
+            "Value": {
+                "id": "392a225b-2a8f-4c6d-a335-bdb9bfdb2331",
+                "resourcePath": "sprites\\bg_hangars\\bg_hangars.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "03accdb3-1229-4a94-8a30-537d988bd65a",
             "Value": {
                 "id": "82ece3bb-488f-44c8-b7f0-1858f31a6762",
@@ -239,6 +247,14 @@
             }
         },
         {
+            "Key": "37f17cbc-7ebc-429b-8569-8be55b88fa22",
+            "Value": {
+                "id": "4e3fd982-9a84-4d10-9629-8c746adceb80",
+                "resourcePath": "sprites\\bg_palm\\bg_palm.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3ab50950-e0f4-49aa-8e38-99783d652365",
             "Value": {
                 "id": "87fbc0e3-84b7-4c55-a918-35b10b90ada3",
@@ -271,6 +287,14 @@
             }
         },
         {
+            "Key": "43f0f099-301a-4df2-8393-a88f0bd0a1cf",
+            "Value": {
+                "id": "50e9e286-6963-4cb2-9dfb-c6e05a1cf93c",
+                "resourcePath": "sprites\\char_eric\\char_eric.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "47198863-cdf4-4e85-858b-d5543fbdac0b",
             "Value": {
                 "id": "73f05c79-f18b-4271-b51b-4fd8aa859c3e",
@@ -284,6 +308,22 @@
                 "id": "f6bcee5d-144d-4eed-90fc-e213473b35fb",
                 "resourcePath": "views\\47777713-2fd8-40dd-b082-eb885ee32c29.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "479e9884-cbdb-47e7-a01c-7a6fbf787752",
+            "Value": {
+                "id": "bd69c4ae-5fb3-4153-afca-3504c3d90f4e",
+                "resourcePath": "sprites\\bg_cockpit\\bg_cockpit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "47c743fc-7d7c-4cf9-9f79-bdfe45c3f06a",
+            "Value": {
+                "id": "fbea19b3-e098-4b91-b35b-680fbe13adf8",
+                "resourcePath": "objects\\o_char_eric\\o_char_eric.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -599,6 +639,14 @@
             }
         },
         {
+            "Key": "8b230ecd-0090-488c-a23f-5671b777735f",
+            "Value": {
+                "id": "19c6f6d9-f581-47f5-ac63-429e1d73b8e2",
+                "resourcePath": "sprites\\char_nancy\\char_nancy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8c2f219c-9223-4cc4-8279-4d2efaecfbd2",
             "Value": {
                 "id": "cd942d72-ec44-43cb-b707-c6edd90c7475",
@@ -708,6 +756,14 @@
                 "id": "f348de17-fc67-42b6-85dd-8b03a188659a",
                 "resourcePath": "fonts\\pager_font\\pager_font.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "a41f252c-e4c0-4065-adc4-1987f35ca45c",
+            "Value": {
+                "id": "0744cd73-97cf-4306-84cd-8ec2c06e1f8b",
+                "resourcePath": "sprites\\bg_way_to_hangars\\bg_way_to_hangars.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -951,6 +1007,14 @@
             }
         },
         {
+            "Key": "df2f3ec1-5449-41bf-b94d-aeeb3c40e90c",
+            "Value": {
+                "id": "957c8408-57b9-440f-88aa-71967bbce406",
+                "resourcePath": "sprites\\bg_transport_pad\\bg_transport_pad.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e1925e90-435b-4805-8aaa-1549cd637871",
             "Value": {
                 "id": "d89bf8ad-ac12-4e7d-8606-b53d03f53453",
@@ -1068,6 +1132,14 @@
                 "id": "ff7b88f1-165a-4eb9-8cb6-d74c5f453de8",
                 "resourcePath": "tilesets\\tiles_forest_tileset\\tiles_forest_tileset.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "f20a0668-f65e-4de3-942a-2ffbf1ed4450",
+            "Value": {
+                "id": "dfbf3eba-ceba-4ae3-9986-cb612f36ec72",
+                "resourcePath": "objects\\o_char_nancy\\o_char_nancy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
