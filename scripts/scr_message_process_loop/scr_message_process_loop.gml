@@ -13,7 +13,7 @@ do {
         {
             charName = msg;
         }
-    }
+    } 
     if (curmsg = NOVELL_TRIGGER_SERVICE_MESSAGE) {
         script_execute(world.event_handler_script);
         messageIsNotDisplayable = true;

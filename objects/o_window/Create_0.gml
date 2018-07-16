@@ -1,3 +1,4 @@
+event_inherited();
 depth = -100;
 global.gamestate = STATE_CUTSCENE;
 

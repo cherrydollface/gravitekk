@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "9b836467-4128-4dde-9e32-c3bca2fabb1b",
+            "Value": {
+                "id": "f291959b-1cf1-4647-b676-16e5f0ff8c6b",
+                "resourcePath": "objects\\o_supports_transition\\o_supports_transition.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9be17287-da82-4089-9221-ed10ff816cfe",
             "Value": {
                 "id": "bf187935-7708-4ed4-892a-007c0cb861e0",
@@ -770,7 +778,7 @@
             "Key": "a7e5ede0-b6bc-4a06-9a13-1b839e251020",
             "Value": {
                 "id": "067abf54-d509-4a7f-ab9c-602b0e0bcd33",
-                "resourcePath": "shaders\\shader_ripple1\\shader_ripple1.yy",
+                "resourcePath": "shaders\\shader_ripple_ext\\shader_ripple_ext.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -788,14 +796,6 @@
                 "id": "aabc13b5-1ad0-43be-890d-cbba48158f6a",
                 "resourcePath": "objects\\o_state_callback\\o_state_callback.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "ae68df3b-c15e-4eac-8050-40c03ae269ad",
-            "Value": {
-                "id": "0ae45e50-a724-4241-831f-863e6d2b90a1",
-                "resourcePath": "scripts\\scr_char_start_destroy\\scr_char_start_destroy.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1254,7 +1254,6 @@
         "e43a7ef1-e62b-4eb8-acfc-e506b4ac6ed4",
         "e1925e90-435b-4805-8aaa-1549cd637871",
         "10a81fdc-41f1-47d6-b38d-2119bbe1b470",
-        "ae68df3b-c15e-4eac-8050-40c03ae269ad",
         "766f9dbb-f097-4714-b888-74e82ea85240"
     ],
     "tutorial": ""

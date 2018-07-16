@@ -1,3 +1,5 @@
+event_inherited();
+
 if(global.gamestate == STATE_PAUSE) return 0;
 
 if (characters < message_length) { //if current character count is less than the amount in current message* 
@@ -14,7 +16,8 @@ else { //if current character is more than the amount in the current message
             message_draw = ""; //clear the drawn text
         }
         else { //if our messages are done (we reach 6, in our case)...
-            instance_destroy(); //destroy the object
+			destroying = true;
+            //instance_destroy(); //destroy the object
         }
     }
 }
