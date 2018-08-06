@@ -1,6 +1,6 @@
 
 {
-    "name": "mission1",
+    "name": "mission1_legacy",
     "id": "e6255bb2-068f-4969-9b08-1f8c5ec7b840",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

@@ -7,6 +7,7 @@
 #macro MASK_TOP 1
 #macro MASK_LEFT 0
 
+#macro BGSTATE_SCROLL 3
 #macro BGSTATE_FADE_IN 2
 #macro BGSTATE_FADE_OUT 1
 #macro BGSTATE_IDLE 0

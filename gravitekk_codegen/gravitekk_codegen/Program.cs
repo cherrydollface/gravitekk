@@ -39,7 +39,8 @@ namespace gravitekk_codegen
 				new CharacterDialogueParser(),
 				new CharacterMoveLeftParser(),
 				new SetCharacterActiveParser(),
-				new DestroyCharacterParser()
+				new DestroyCharacterParser(),
+				new BgScrollParser()
 			};
 
 			string line;

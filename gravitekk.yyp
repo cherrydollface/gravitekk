@@ -183,11 +183,27 @@
             }
         },
         {
+            "Key": "17a2b7b9-51b6-48c0-a233-10a230468b83",
+            "Value": {
+                "id": "080b1787-6738-463c-9cb1-f1fbbfeabc21",
+                "resourcePath": "rooms\\Intermission1\\Intermission1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "18a6ccca-1764-42a3-a97e-1123bef7dcca",
             "Value": {
                 "id": "9f63a478-1964-4de4-850c-e6e2fce3879d",
                 "resourcePath": "views\\18a6ccca-1764-42a3-a97e-1123bef7dcca.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "19903a40-fa63-4ba9-a184-a946b3985f77",
+            "Value": {
+                "id": "399700bd-5fa4-4ba7-8764-abcfc8aaf214",
+                "resourcePath": "sprites\\sprite_player_mask\\sprite_player_mask.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -227,6 +243,14 @@
             "Value": {
                 "id": "cbfbf370-9c71-44d6-a0cd-a2597bc96fed",
                 "resourcePath": "scripts\\scr_mission_1\\scr_mission_1.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "321b2ab3-fa3f-45c5-8837-5f6a444035ba",
+            "Value": {
+                "id": "35302a3e-fd3e-48c3-903d-17c15aaddc07",
+                "resourcePath": "scripts\\scr_intermission1_messager_init\\scr_intermission1_messager_init.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -407,6 +431,14 @@
             }
         },
         {
+            "Key": "586c85ba-604e-48ee-9a6e-b0244fa031c9",
+            "Value": {
+                "id": "fb838480-ecc1-41ca-a898-59463f568896",
+                "resourcePath": "sprites\\bg_autumn_park\\bg_autumn_park.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5ab27e12-fa2c-4ae1-b308-f2cb05b5b1e3",
             "Value": {
                 "id": "019ea8b5-579f-43e7-82a4-305da48ea6c8",
@@ -508,6 +540,14 @@
                 "id": "a54e37b3-a9cd-4d9c-873a-ffcc3c536383",
                 "resourcePath": "scripts\\scr_apply_slime_mask\\scr_apply_slime_mask.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "70e15bcd-4d47-46ea-bf44-a317a572c7c7",
+            "Value": {
+                "id": "3a1af67f-510a-4c6a-8a08-3ba253f42e28",
+                "resourcePath": "sprites\\bg_park_agatha_worms\\bg_park_agatha_worms.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -627,6 +667,14 @@
             "Value": {
                 "id": "c0c5fc05-fe4a-4e20-a36c-eaab6824bb2c",
                 "resourcePath": "scripts\\scr_draw_window_text\\scr_draw_window_text.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "894eb5a7-5fa8-4f70-86c4-555c1d8671ea",
+            "Value": {
+                "id": "53ec5ae1-a58b-4739-8a08-c58ef62ba181",
+                "resourcePath": "scripts\\scr_intermission1_event_handler\\scr_intermission1_event_handler.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -751,6 +799,14 @@
             }
         },
         {
+            "Key": "9e9ad6e8-973f-484a-a977-c4b0004c6347",
+            "Value": {
+                "id": "72f36964-10fd-4862-aa6a-022d816005ca",
+                "resourcePath": "objects\\o_char_agatha\\o_char_agatha.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9ed48a1d-2148-4864-ba5d-aee94d880801",
             "Value": {
                 "id": "5bb5c2c5-5420-4aa4-8714-634a5039ebae",
@@ -823,11 +879,27 @@
             }
         },
         {
+            "Key": "b51f2c63-c4bb-4c4c-922f-affeeecc751f",
+            "Value": {
+                "id": "8f95b137-2e8d-4651-b5cc-de079a1b6efb",
+                "resourcePath": "sprites\\sprite_energy_crystal\\sprite_energy_crystal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b5a726cf-a553-49b4-815b-d32daf18866c",
             "Value": {
                 "id": "47367c4c-26b3-474a-88cd-c0ffbd4063cb",
                 "resourcePath": "views\\b5a726cf-a553-49b4-815b-d32daf18866c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b992ddd9-22f2-4fc6-b6c6-4a63ae1b361f",
+            "Value": {
+                "id": "c3befc6e-9774-43bb-8a82-a29553eafe27",
+                "resourcePath": "sprites\\char_agatha\\char_agatha.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1050,7 +1122,7 @@
             "Key": "e6255bb2-068f-4969-9b08-1f8c5ec7b840",
             "Value": {
                 "id": "48bc484e-c9e2-42a3-8fd3-3e4e86ca315a",
-                "resourcePath": "rooms\\mission1\\mission1.yy",
+                "resourcePath": "rooms\\mission1_legacy\\mission1_legacy.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1074,7 +1146,7 @@
             "Key": "e8310105-096a-4286-93cd-4ba3e6df618b",
             "Value": {
                 "id": "3fe95bf9-aaa3-4f8f-bab8-8b628204be42",
-                "resourcePath": "rooms\\TestRoom\\TestRoom.yy",
+                "resourcePath": "rooms\\Mission1_A\\Mission1_A.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1127,6 +1199,14 @@
             }
         },
         {
+            "Key": "f0b6d0ef-1e2c-47e7-846a-47a8c30d6d01",
+            "Value": {
+                "id": "1c4700b5-1362-420d-be46-2820d5037fdb",
+                "resourcePath": "objects\\o_energy_crystal\\o_energy_crystal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f15d58a3-bbe1-4bae-afe4-f03aca5c5acc",
             "Value": {
                 "id": "ff7b88f1-165a-4eb9-8cb6-d74c5f453de8",
@@ -1148,6 +1228,14 @@
                 "id": "17974344-40d6-4c3e-8c27-a25f8bd278be",
                 "resourcePath": "shaders\\shader_ripple\\shader_ripple.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "f3518678-2f05-451b-8d36-c99453488816",
+            "Value": {
+                "id": "000fdf42-007f-4be6-986d-b30fa743616a",
+                "resourcePath": "sprites\\bg_park_agatha_hug\\bg_park_agatha_hug.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1230,6 +1318,8 @@
         "e4545863-f61c-49c3-9880-0d5415df390e",
         "906ad9ce-c049-432c-a686-a497163f2787",
         "f6fd47af-d621-4c07-bf00-f4f88d16193a",
+        "321b2ab3-fa3f-45c5-8837-5f6a444035ba",
+        "894eb5a7-5fa8-4f70-86c4-555c1d8671ea",
         "4090403d-4eef-4285-93b2-ad4759b68441",
         "dc2d74d2-fcfd-44a1-9265-c5d27e311754",
         "94d7bf9c-edd0-4f92-b480-c560eb0cdd8b",

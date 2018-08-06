@@ -16,7 +16,11 @@
         "a41f252c-e4c0-4065-adc4-1987f35ca45c",
         "37f17cbc-7ebc-429b-8569-8be55b88fa22",
         "479e9884-cbdb-47e7-a01c-7a6fbf787752",
-        "03529e1e-e584-48a9-95d6-8f3d1e07c55a"
+        "03529e1e-e584-48a9-95d6-8f3d1e07c55a",
+        "586c85ba-604e-48ee-9a6e-b0244fa031c9",
+        "70e15bcd-4d47-46ea-bf44-a317a572c7c7",
+        "b992ddd9-22f2-4fc6-b6c6-4a63ae1b361f",
+        "f3518678-2f05-451b-8d36-c99453488816"
     ],
     "filterType": "GMSprite",
     "folderName": "novel",

@@ -1,0 +1,2 @@
+messager_script = scr_intermission1_messager_init;
+event_handler_script = scr_intermission1_event_handler;

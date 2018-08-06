@@ -12,27 +12,39 @@ if(cur_bg = -1) {
 }
 
 if(state == BGSTATE_IDLE) {
-    draw_sprite(cur_bg, 0, 0, 0);
+    draw_sprite(cur_bg, 0, offset_x, offset_y);
 } else {
     if(state == BGSTATE_FADE_OUT) {
         a = clamp(a - (fade * 0.025),0,1); 
      //   draw_set_alpha(0.3);
-        draw_sprite_ext(cur_bg, 0, 0, 0, 1, 1, 0, c_white, a);   
+        draw_sprite_ext(cur_bg, 0, offset_x, offset_y, 1, 1, 0, c_white, a);   
        // draw_set_alpha(1); 
         if(a == 0) {
            state = BGSTATE_FADE_IN; 
+		   offset_x = 0;
+		   offset_y = 0;
            cur_bg = new_bg;
         }      
     } else {
         if(state == BGSTATE_FADE_IN) {
             a = clamp(a + (fade * 0.025),0,1); 
             draw_set_alpha(a);
-            draw_sprite(cur_bg, 0, 0, 0);   
+            draw_sprite(cur_bg, 0, offset_x, offset_y);   
             draw_set_alpha(1);
             if (a == 1) {
                 state = BGSTATE_IDLE;
             }        
-        }
-    }
+        } else {
+			if(state == BGSTATE_SCROLL) {
+				var delta = room_height - sprite_get_height(cur_bg);
+				if(delta != 0 && abs(offset_y) <= abs(delta) ) {
+					offset_y += delta / abs(delta);	 
+				} else { 
+					state = BGSTATE_IDLE; 
+				}
+				draw_sprite(cur_bg, 0, offset_x, offset_y);
+			}
+			
+		}
+    } 
 }
-

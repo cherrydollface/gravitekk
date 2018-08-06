@@ -48,6 +48,7 @@
     <Compile Include="Headers.cs" />
     <Compile Include="IParser.cs" />
     <Compile Include="Parsers\BgChangeParser.cs" />
+    <Compile Include="Parsers\BgScrollParser.cs" />
     <Compile Include="Parsers\CharacterDialogueParser.cs" />
     <Compile Include="Parsers\CharacterMoveLeftParser.cs" />
     <Compile Include="Parsers\CreateCharacterParser.cs" />

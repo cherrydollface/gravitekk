@@ -1,5 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_alpha = 0;
+event_inherited();
 global.gamestate = STATE_TRANSITION;
-destroying = false;

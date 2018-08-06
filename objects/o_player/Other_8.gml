@@ -1,5 +1,5 @@
 /// @description  Snap it!
-move_snap( CELLSIZE, CELLSIZE );
+move_snap( CELLSIZE * 0.5, CELLSIZE * 0.5 );
 
 moving = 0;
 var __b__;

@@ -50,7 +50,7 @@ for (i = 0; i < surfaces_w; i += 1) {
 
 		surf_ground[i, j] = surface_create(surface_width, surface_height);
         surface_set_target(surf_ground[i, j]);
-        draw_clear_alpha(0, 0);
+        draw_clear_alpha(0, 1);
         surface_reset_target()
     }
 }
@@ -81,12 +81,15 @@ do {
 
 						var pl_res = scr_slime_tilesurface_plugin(layerdepth, xx, yy, tilemap_get_tileset(lt), t);
                         
-                        if (layerdepth == LAYER_GROUND) {                              
-                            draw_set_blend_mode_ext(bm_one, bm_one);    
+                        if (layerdepth == LAYER_AUX1) {                              
+                //            draw_set_blend_mode_ext(bm_one, bm_one);    
+				//		    draw_set_colour_write_enable(true, true, true, false);
                         }
 
 						if(pl_res == 0) {
+							
 							draw_tile(tilemap_get_tileset(lt), t, 0, xx - (surface_width * i), yy - (surface_height * j));
+							draw_set_colour_write_enable(true, true, true, true);
 						}
                         
 						var empty_tile_data = tile_set_empty(t);
