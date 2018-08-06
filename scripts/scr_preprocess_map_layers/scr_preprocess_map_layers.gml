@@ -18,6 +18,7 @@ layers = ds_queue_create();
 // Must be in descending order
 
 ds_queue_enqueue(layers, LAYER_GROUND);
+ds_queue_enqueue(layers, "Worms");
 ds_queue_enqueue(layers, LAYER_AUX1);
 ds_queue_enqueue(layers, LAYER_SLIME);
 ds_queue_enqueue(layers, LAYER_AUX2);

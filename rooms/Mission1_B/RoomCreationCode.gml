@@ -1,0 +1,1 @@
+global.gamestate = STATE_GAME;

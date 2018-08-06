@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "438b0c45-bb93-43c6-97e3-5e875ea7723e",
+            "Value": {
+                "id": "ec68be59-f3ff-4a62-add8-eb17cda7c556",
+                "resourcePath": "rooms\\Mission1_B\\Mission1_B.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "43f0f099-301a-4df2-8393-a88f0bd0a1cf",
             "Value": {
                 "id": "50e9e286-6963-4cb2-9dfb-c6e05a1cf93c",
@@ -519,6 +527,14 @@
             }
         },
         {
+            "Key": "6b8c686a-6be1-4ae0-8469-9d966bad76bf",
+            "Value": {
+                "id": "c56ea70c-c642-4197-bc13-16a95b8b561a",
+                "resourcePath": "tilesets\\tileset_worms\\tileset_worms.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "6b9ef05d-e8be-487b-a90c-b17e8b5a500c",
             "Value": {
                 "id": "f5edbd39-7948-49ee-9a6c-6d6ea2fc053a",
@@ -699,6 +715,14 @@
             "Value": {
                 "id": "cd942d72-ec44-43cb-b707-c6edd90c7475",
                 "resourcePath": "sprites\\sprite_novel_world\\sprite_novel_world.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8c5bfd5e-ce12-4686-b92f-75019a3fc60e",
+            "Value": {
+                "id": "341864f5-6971-434d-b077-0eaff79b7495",
+                "resourcePath": "sprites\\worms_tileset\\worms_tileset.yy",
                 "resourceType": "GMSprite"
             }
         },
