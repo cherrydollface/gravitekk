@@ -2,7 +2,7 @@
     "id": "9e2c87f6-bfda-498c-9599-24c70de27c1f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_pause",
+    "name": "o_global_listener",
     "eventList": [
         {
             "id": "11df8839-9e15-4067-9b98-c8bb7258a08a",

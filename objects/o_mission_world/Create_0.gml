@@ -5,4 +5,4 @@ sequence_index = -1;
 tilesurfacer = instance_create(0, 0, o_tilesurfacer);
 pager = instance_create(0, 0, o_pager);
 bloodsack = instance_create(0, 0, o_bloodsack);
-pause = instance_create(0, 0, o_pause);
+pause = instance_create(0, 0, o_global_listener);

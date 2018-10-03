@@ -22,6 +22,7 @@ global.__objectDepths[14] = 0; // o_button
 global.__objectDepths[15] = 0; // o_skip_button
 global.__objectDepths[16] = 0; // o_slime
 global.__objectDepths[17] = 0; // o_death
+global.__objectDepths[18] = -1;// o_global_listener
 
 
 global.__objectNames[0] = "o_player";
@@ -42,6 +43,7 @@ global.__objectNames[14] = "o_button";
 global.__objectNames[15] = "o_skip_button";
 global.__objectNames[16] = "o_slime";
 global.__objectNames[17] = "o_death";
+global.__objectNames[18] = "o_global_listener";
 
 
 // create another array that has the correct entries

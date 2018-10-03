@@ -3,6 +3,7 @@ scr_global_variables();
 
 // todo create ini file with menu localization
 // Available selections in pause menu
+
 pauseMenu[0] = "Resume";
 pauseMenu[1] = "Save"; 
 pauseMenu[2] = "Load";
@@ -20,6 +21,12 @@ menu[3] = "About";
 menu[4] = "Quit";
 
 global.mainMenuElements = menu;
+
+// Available selections in option menu
+optionsMenu[0] = "Music";
+optionsMenu[1] = "Sound";
+
+global.optionsMenu = optionsMenu;
 
 global.menuElements = menu;
 

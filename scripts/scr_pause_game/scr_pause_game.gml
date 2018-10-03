@@ -1,5 +1,3 @@
 // Change status of pause
-global.gameState = STATE_PAUSE
-
-// Deactive all instance
-instance_deactivate_all(true)
+global.activeMenu = MENU_PAUSE;
+global.gamestate = STATE_PAUSE;

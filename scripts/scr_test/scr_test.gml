@@ -1,9 +1,39 @@
 //This is a junk script for testing different things
-show_debug_message("Button are work")
+show_debug_message("#######Test script have been activated!#######")
+
+//show_debug_message(argument0)
+
+//var i = scr_read_value_from_file("Save 0.txt","Save time", "time");
+//show_debug_message(i);
+
+//var spr = sprite_add("ScreensScreen_1.png", 16, true, true, 0, 0);
+
+/*
+var spr = sprite_add(working_directory + "\Screens\Screen_1.png", 1, 0, 0, 0, 0);
+sprite_index = spr;
+draw_sprite(sprite_index, 0, global.cursorPosition[0, 0], global.cursorPosition[0, 1]);
+*/
+
+//show_debug_message("String " + SCREENSHOTFOLDER + "x")
+//global.gameState = STATE_GAME;
+//room_goto(2);
+
+//scr_unpause_game();
+/*
+var screenshot = scr_string_replace(SCREENSHOT_CLEAR, 2);
+show_debug_message("File: " + screenshot);
+//show_debug_message("Full: " )
+if (file_exists(screenshot)){
+	show_debug_message("Exist");
+} else {
+	show_debug_message("NotExist");
+}*/
+if sprite_exists(sprite_save_load_placeholder){
+	show_debug_message("True");
+} else {
+	show_debug_message("False");}
 
 
-var i = scr_read_value_from_file("Save 0.txt","Save time", "time");
-show_debug_message(i);
 //show_debug_message(global.test)
 
 //show_debug_message("Game state")

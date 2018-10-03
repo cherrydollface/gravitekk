@@ -1,5 +1,5 @@
 
-for ( var i = 0; i < SLOTS_FOR_SAVES; i ++){
+for ( var i = 0; i < SLOTS_FOR_SAVES; i++){
 	requestedFile = scr_string_replace("Save {}.txt", i)
     
     if file_exists(requestedFile){ 

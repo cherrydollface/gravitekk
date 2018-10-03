@@ -2,7 +2,7 @@
 var file = argument0;
 var category = argument1;
 var section = argument2;
-var value = rgument3;
+var value = argument3;
 
 ini_open(file);
 
