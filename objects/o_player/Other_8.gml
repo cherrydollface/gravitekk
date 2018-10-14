@@ -10,8 +10,8 @@ if __b__
 with (o_beacon_crystal) {
 /// move beacon crystal
 
-var dx = origin_x - x;
-var dy = origin_y - y;
+var dx = origin_x - (x + CELLSIZE * 0.5);
+var dy = origin_y - (y + CELLSIZE * 0.5);
 
   // create path
     var p = path_add();

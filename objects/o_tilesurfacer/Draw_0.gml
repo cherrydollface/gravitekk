@@ -18,7 +18,7 @@ for (i = 0; i < surfaces_w; i += 1) {
 // draw blood and filth
 draw_surface(bloodfilth_surf, 0, 0);
 
-
+/*
 // draw all other tiles
 for (i = 0; i < surfaces_w; i += 1) {
     for (j = 0; j < surfaces_h; j += 1) {
@@ -32,3 +32,4 @@ for (i = 0; i < surfaces_w; i += 1) {
         draw_background(bg_statusbar2, 0, 480 -32)
     }
 }
+*/

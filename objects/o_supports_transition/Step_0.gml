@@ -7,7 +7,7 @@ if (object_get_name( id.object_index) == "o_novel_window" ) { // we don't need t
 }
 
 if (image_alpha < 1 && !destroying) { image_alpha += 0.05 } else {
-	global.gamestate = STATE_GAME;
+//	global.gamestate = STATE_GAME;
 }
 if(destroying) {
 	if (image_alpha > 0) { image_alpha -= 0.05 } else {

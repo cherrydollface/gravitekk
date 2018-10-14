@@ -5,9 +5,10 @@ shader_set(shader_ripple_ext)
 shader_set_uniform_f(uTime, current_time/1000);
 shader_set_uniform_f(uFxMix, fx);
 
-draw_clear_alpha(0, 1)
+//draw_clear_alpha(0, 1)
 draw_set_alpha(image_alpha);
 draw_set_colour(c_white);
+
 draw_set_font(header_font);
 draw_text_ext(x, y, string_hash_to_newline(message_draw), CELLSIZE * 0.5, CELLSIZE * (lookup_width_cells - 1));
 draw_set_alpha(1);

@@ -16,32 +16,51 @@ if (moving == 0 && otherpart.moving == 0) {
 
     dx = 0;
     dy = 0;
+	ddx = 0;
+	ddy = 0;
 
     if (otherpart.x == x and otherpart.y > y) {
         dx = -CELLSIZE * argument0;
-        dy = CELLSIZE
+        dy = CELLSIZE;
+		
+		ddx = dx;
+		ddy = 0;		
     } else {
         if (otherpart.x == x and otherpart.y < y) {
             dx = CELLSIZE * argument0;
             dy = -CELLSIZE;
+			
+			ddx = dx;
+			ddy = 0;		
         } else
         if (otherpart.y == y and otherpart.x < x) {
             dx = -CELLSIZE;
             dy = -CELLSIZE * argument0;
+			
+			ddy = dy;
+			ddx = 0;					
         } else
         if (otherpart.y == y and otherpart.x > x) {
             dx = CELLSIZE;
             dy = CELLSIZE * argument0;
+			
+			ddy = dy;
+			ddx = 0;					
         }
     }
     
     // create path
     var p = path_add();
-    path_add_point(p, 0, 0, 100);
+//  path_set_kind(p, 1);
+//	path_set_precision(p, 8);
+
+
+	path_add_point(p, 0, 0, 100);
+	path_add_point(p, ddx, ddy, 100);
     path_add_point(p, dx, dy, 100);
+	
     path_set_closed(p, 0);
-    path_set_kind(p, 0);
     // start path
-    path_start(p, 2, path_action_stop, 0);
+    path_start(p, 4, path_action_stop, 0);
     moving = 1;
 }

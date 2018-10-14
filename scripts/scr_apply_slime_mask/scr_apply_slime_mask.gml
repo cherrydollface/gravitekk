@@ -2,7 +2,7 @@ var posx = argument0;
 var posy = argument1;
 var slime_mask_index = argument2;
 
-if (instance_position(posx, posy, o_slime) == noone) {
+if (instance_position(posx, posy, o_slime) == noone && instance_position(posx, posy, o_solid) == noone) {
    // apply mask
    draw_set_blend_mode_ext( bm_dest_color, bm_zero );
           

@@ -10,6 +10,11 @@ if(world.sequence_index = 6) {
     message[5] = "Это был прогноз погоды на сегодня, на завтра и навсегда."
     message[6] = "C вами радиостанция `Матросская тишина`, не переключайтесь"
 } else {
-    message[0] = "Unknown dialog sequence!"
+	if(world.sequence_index == 100) {
+		message[0] = "Миссия выполнена!"
+	} else {
+		message[0] = "Unknown dialog sequence!"
+	}
+    
 }
 

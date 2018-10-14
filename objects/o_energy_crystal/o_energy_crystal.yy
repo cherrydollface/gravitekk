@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_energy_crystal",
     "eventList": [
-        
+        {
+            "id": "dc2d223c-20dc-405d-a1a2-aae06884e611",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "95af7074-1a49-4bc8-82d8-f7f510330615",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "f0b6d0ef-1e2c-47e7-846a-47a8c30d6d01"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -22,7 +31,9 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        
+    ],
     "solid": false,
     "spriteId": "b51f2c63-c4bb-4c4c-922f-affeeecc751f",
     "visible": true
