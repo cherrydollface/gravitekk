@@ -60,3 +60,66 @@
 #macro DOOR_OPEN 0
 #macro DOUBLE_PAD 1
 #macro PAD_SEQUENCE 2
+
+//Cell variables
+#macro SPACE_BETWEEN_POSITIONS 64 //64
+#macro SPACE_BETWEEN_SAVED_PICS 96
+
+//Main menu positions
+#macro MENU_MAIN			0
+#macro MENU_MAIN_START		1
+#macro MENU_MAIN_LOAD		2
+#macro MENU_MAIN_OPTION		3
+#macro MENU_MAIN_ABOUT		4
+#macro MENU_MAIN_QUIT		5
+
+//Pause meun positions
+#macro MENU_PAUSE			7
+#macro MENU_PAUSE_RESUME	8
+#macro MENU_PAUSE_SAVE		9
+#macro MENU_PAUSE_LOAD		10
+#macro MENU_PAUSE_OPTION	11
+#macro MENU_PAUSE_QUIT		12
+
+#macro MENU_TEST		13 // Test option in pause menu
+
+
+//Menu positions
+#macro MENU_X_POSITION	256 // 64
+#macro MENU_Y_POSITION	160 // 96
+
+//Cursor selection position
+#macro CURSOR_LEFT_X_POSITION 0
+#macro CURSOR_LEFT_Y_POSITION 0
+
+//Cursor actived
+#macro CURSOR_DISABLED	0
+#macro CURSOR_ENABLED	1
+
+//Save games
+#macro SLOTS_FOR_SAVES 4
+
+//Player input 
+#macro PLAYER_INPUT_ENABLED		1
+#macro PLAYER_INPUT_DISABLED	0
+
+//Menu values
+#macro MAIN_MENU_POSITIONS_LIMIT	5
+#macro PAUSE_MENU_POSITIONS_LIMIT	7
+
+//Keyboard input
+#macro KEYBOARD_INPUT_DISABLED 0
+#macro KEYBOARD_INPUT_ENABLED 1
+
+//Music and Sound
+#macro DEFAULT_MUSIC_VALUE 5
+#macro DEFAULT_SOUND_VALUE 5
+#macro MINIMAL_MUSIC_VALUE 0
+#macro MINIMAL_SOUND_VALUE 0
+#macro MAXIMAL_MUSIC_VALUE 10
+#macro MAXIMAL_SOUND_VALUE 10
+
+//Screenshot
+#macro SCREENSHOT_TMP "ScreenTmp.png"
+#macro SCREENSHOT_CLEAR "Screenshot_{}.png"
+#macro SCREENSHOT_FOLDER working_directory + "\Screenshot\\"

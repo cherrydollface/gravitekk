@@ -10,3 +10,4 @@ with(instance_create_layer(0, 0, "TileSurfacerTop", o_tilesurfacer_top)) {
 }
 pager = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_pager);
 bloodsack = instance_create_layer(0, 0, LAYER_DEFAULT_OBJECT, o_bloodsack);
+mainmenu = instance_create_layer(0, 0, LAYER_DEFAULT_UI, o_menu_new);
