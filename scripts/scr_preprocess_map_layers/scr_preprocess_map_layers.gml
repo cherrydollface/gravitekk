@@ -87,8 +87,7 @@ do {
 				//		    draw_set_colour_write_enable(true, true, true, false);
                         }
 
-						if(pl_res == 0) {
-							
+						if(pl_res == 0) {							
 							draw_tile(tilemap_get_tileset(lt), t, 0, xx - (surface_width * i), yy - (surface_height * j));
 							draw_set_colour_write_enable(true, true, true, true);
 						}

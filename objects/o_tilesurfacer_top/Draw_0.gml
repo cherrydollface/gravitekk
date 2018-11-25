@@ -13,7 +13,7 @@ for (i = 0; i < surfaces_w; i += 1) {
         } else {
             draw_surface(surf[i, j], surface_width * i, surface_height * j);
         }
-        draw_background(bg_statusbar2, 0, 480 -32)
+        //draw_background(bg_statusbar2, 0, 480 -32)
     }
 }
 }

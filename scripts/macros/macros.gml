@@ -26,6 +26,8 @@
 #macro LAYER_SOLID "Solid"
 #macro LAYER_OVERLAYS "Overlays"
 #macro LAYER_SERVICE_TILESURFACER "TileSurfacer"
+#macro LAYER_SERVICE_TILESURFACER_TOP "TileSurfacerTop"
+#macro LAYER_SERVICE_SLIME_SLOTS "SlimeSlots"
 #macro LAYER_DEFAULT_OBJECT "Instances"
 #macro LAYER_DEFAULT_UI "UI"
 
@@ -62,35 +64,40 @@
 #macro PAD_SEQUENCE 2
 
 //Cell variables
-#macro SPACE_BETWEEN_POSITIONS 64 //64
+#macro SPACE_BETWEEN_POSITIONS 64 
 #macro SPACE_BETWEEN_SAVED_PICS 96
 
 //Main menu positions
-#macro MENU_MAIN			0
-#macro MENU_MAIN_START		1
-#macro MENU_MAIN_LOAD		2
-#macro MENU_MAIN_OPTION		3
-#macro MENU_MAIN_ABOUT		4
-#macro MENU_MAIN_QUIT		5
+#macro MENU_MAIN_NEW_GAME	0
+#macro MENU_MAIN_LOAD		1
+#macro MENU_MAIN_OPTION		2
+#macro MENU_MAIN_ABOUT		3
+#macro MENU_MAIN_QUIT		4
+#macro MENU_MAIN_DEBUG1		5
+#macro MENU_MAIN_DEBUG2		6
 
-//Pause meun positions
-#macro MENU_PAUSE			7
-#macro MENU_PAUSE_RESUME	8
-#macro MENU_PAUSE_SAVE		9
-#macro MENU_PAUSE_LOAD		10
-#macro MENU_PAUSE_OPTION	11
-#macro MENU_PAUSE_QUIT		12
-
-#macro MENU_TEST		13 // Test option in pause menu
-
+//In-game pause menu positions
+#macro MENU_PAUSE_RESUME				0
+#macro MENU_PAUSE_SAVE					1
+#macro MENU_PAUSE_LOAD					2
+#macro MENU_PAUSE_OPTION				3
+#macro MENU_PAUSE_RESTART				4
+#macro MENU_PAUSE_QUIT_TO_MAIN_MENU		5
+#macro MENU_PAUSE_QUIT_GAME				6 
+#macro MENU_PAUSE_DEBUG1				7
+#macro MENU_PAUSE_DEBUG2				8
 
 //Menu positions
-#macro MENU_X_POSITION	256 // 64
-#macro MENU_Y_POSITION	160 // 96
+#macro MENU_X_POSITION	256 
+#macro MENU_Y_POSITION	160 
 
 //Cursor selection position
 #macro CURSOR_LEFT_X_POSITION 0
 #macro CURSOR_LEFT_Y_POSITION 0
+
+//For modal menus
+#macro YES 1
+#macro NO  0
 
 //Cursor actived
 #macro CURSOR_DISABLED	0
@@ -123,3 +130,6 @@
 #macro SCREENSHOT_TMP "ScreenTmp.png"
 #macro SCREENSHOT_CLEAR "Screenshot_{}.png"
 #macro SCREENSHOT_FOLDER working_directory + "\Screenshot\\"
+
+//Localization
+#macro UI_LANGUAGE "Default"

@@ -8,6 +8,7 @@ namespace gravitekk_codegen {
 	enum GeneratedCodeTarget
 	{
 		MessageConstructor,
-		EventHandler
+		EventHandler,
+		MissionDialog
 	}
 }

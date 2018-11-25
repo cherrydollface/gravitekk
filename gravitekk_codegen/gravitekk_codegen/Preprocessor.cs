@@ -65,12 +65,18 @@ namespace gravitekk_codegen {
 			bool openBracket = false;
 			int openBracketLine = 0;
 			int preproLine = 0;
+			var skipProcessing = false;
 			var acc = string.Empty;
 			using (var s = File.OpenText(fileName))
 			{
 				string line;
 				while ((line = s.ReadLine()) != null)
 				{
+					if (line == "#!dialog")
+					{
+						Console.WriteLine("Skipping preprocessing");
+						skipProcessing = true;
+					}
 					preproLine++;
 
 					var trimmnedLine = line.Trim();
@@ -83,7 +89,7 @@ namespace gravitekk_codegen {
 						stream.WriteLine(trimmnedLine);
 						continue;						
 					}
-					if (IsSeparateLine(trimmnedLine))
+					if (IsSeparateLine(trimmnedLine) || skipProcessing)
 					{
 						stream.WriteLine(trimmnedLine);
 						continue;						

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using gravitekk_codegen.Parsers;
+using gravitekk_codegen.Parsers.MissionDialog;
 
 namespace gravitekk_codegen
 {
@@ -30,8 +31,9 @@ namespace gravitekk_codegen
 
 			var messageConstructorCode = new List<string>();
 			var eventHandlerCode = new List<string>();
+			var missionDialogCode = new List<string>();
 
-			var parsers = new List<IParser>
+			var chapterParsers = new List<IParser>
 			{
 				new NarratorTextParser(),
 				new BgChangeParser(),
@@ -42,6 +44,14 @@ namespace gravitekk_codegen
 				new DestroyCharacterParser(),
 				new BgScrollParser()
 			};
+
+			var missionDialogParsers = new List<IParser>
+			{
+				new DialogAliasParser(),
+				new DialogLineParser()
+			};
+
+			var parsers = chapterParsers;
 
 			string line;
 			int linenumber = 0;
@@ -57,7 +67,7 @@ namespace gravitekk_codegen
 
 			stream.Flush();
 			stream.BaseStream.Position = 0;
-
+			
 			if (debugMode)
 			{
 				using (var s = new StreamWriter("preproc.txt"))
@@ -70,6 +80,17 @@ namespace gravitekk_codegen
 
 			using (var s = new StreamReader(stream.BaseStream))
 			{
+				var cvc = s.ReadLine();
+				Console.WriteLine("SHIT! " + cvc);
+				if (cvc == "#!dialog")
+				{
+					parsers = missionDialogParsers;
+					Console.WriteLine("Mission dialog signature detected");
+				}
+				else
+				{
+					stream.BaseStream.Position = 0;	
+				}				
 				while ((line = s.ReadLine()) != null)
 				{
 					var stringParsed = false;
@@ -93,6 +114,13 @@ namespace gravitekk_codegen
 										eventHandlerCode.AddRange(chunk.GeneratedCode);
 										break;
 									}
+
+									case GeneratedCodeTarget.MissionDialog:
+									{
+										missionDialogCode.AddRange(chunk.GeneratedCode);
+										break;
+									}
+
 									default:
 										break;
 								}
@@ -114,19 +142,36 @@ namespace gravitekk_codegen
 				}
 			}
 
-			using (var s = new StreamWriter($"scr_{chapterPrefix}_messager_init.gml"))
+			if (messageConstructorCode.Any())
 			{
-				messageConstructorCode.ForEach(c => s.WriteLine(c));
+				using (var s = new StreamWriter($"scr_{chapterPrefix}_messager_init.gml"))
+				{
+					messageConstructorCode.ForEach(c => s.WriteLine(c));
+				}
 			}
 
-			using (var s = new StreamWriter($"scr_{chapterPrefix}_event_handler.gml"))
+			if (eventHandlerCode.Any())
 			{
-				s.WriteLine("var world = instance_find(o_novel_world, 0);");
-				s.WriteLine("switch(world.worldEventCount) {"); 
-				eventHandlerCode.ForEach(c => s.WriteLine("\t" + c));
-				s.WriteLine("	default : break;");
-				s.WriteLine("}");
-				s.WriteLine("world.worldEventCount++;");
+				using (var s = new StreamWriter($"scr_{chapterPrefix}_event_handler.gml"))
+				{
+					s.WriteLine("var world = instance_find(o_novel_world, 0);");
+					s.WriteLine("switch(world.worldEventCount) {"); 
+					eventHandlerCode.ForEach(c => s.WriteLine("\t" + c));
+					s.WriteLine("	default : break;");
+					s.WriteLine("}");
+					s.WriteLine("world.worldEventCount++;");
+				}
+			}
+
+			if (missionDialogCode.Any())
+			{			
+				using (var s = new StreamWriter($"scr_{chapterPrefix}_mission_dialogs.gml"))
+				{
+					s.WriteLine("var message = ds_queue_create();");
+					missionDialogCode.ForEach(s.WriteLine);
+					s.WriteLine("}");
+					s.WriteLine("return message");
+				}
 			}
 		}
 	}

@@ -25,13 +25,15 @@ var dy = origin_y - (y + CELLSIZE * 0.5);
 }
 }
 }
-__b__ = action_if_object(o_gravipad, x, y);
+__b__ = action_if_object(o_gravipad_objective, x, y);
 if __b__
 {
 {
+/*	
 var world = instance_find(o_mission_world, 0);
-world.sequence_index = 6;
-
-action_create_object(o_window, 96, 32);
+world.sequence_index = 6;//__b__.hitag;
+world.currentDialogName = __b__.dialog_name;//__b__.hitag;
+*/
+action_create_object(o_window_dialog, 96, 32);
 }
 }

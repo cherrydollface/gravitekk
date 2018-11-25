@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if((keyboard_check_pressed(vk_escape) || mouse_check_button_pressed(mb_middle)) /*& (global.activeMenu != MENU_MAIN) & (global.activeMenu != MENU_MAIN_LOAD) & (global.activeMenu != MENU_MAIN_OPTION)*/){
-	if(global.activeMenu == MENU_PAUSE){
+	if(activeMenu == MENU_PAUSE){
 		scr_execute_menu_command(MENU_PAUSE_RESUME);
 		menuIsActive = false;
 	 } else {
@@ -21,10 +21,10 @@ if(keyboard_check_pressed(ord("O"))){
 	game_load("Save 20.dat");
 }
 if(keyboard_check_pressed(ord("K"))){
-	show_debug_message(global.activeMenu);
+	show_debug_message(activeMenu);
 }
 if(keyboard_check_pressed(ord("M"))){
-	show_debug_message(global.activeMenu);
+	show_debug_message(activeMenu);
 }
 if(keyboard_check_pressed(ord("N"))){
 	global.gamestate = STATE_PAUSE;
@@ -33,11 +33,11 @@ if(keyboard_check_pressed(ord("B"))){
 	global.gamestate = STATE_GAME;
 }
 
-if(keyboard_check_pressed(vk_escape) & (global.activeMenu != MENU_MAIN) & ((global.activeMenu == MENU_MAIN_LOAD) || (global.activeMenu == MENU_PAUSE_LOAD))){
-    global.activeMenu = MENU_MAIN;
+if(keyboard_check_pressed(vk_escape) & (activeMenu != MENU_MAIN) & ((activeMenu == MENU_MAIN_LOAD) || (activeMenu == MENU_PAUSE_LOAD))){
+    activeMenu = MENU_MAIN;
 }
-if(keyboard_check_pressed(vk_escape) & (global.activeMenu == MENU_MAIN_OPTION)){
-    global.activeMenu = MENU_MAIN;
+if(keyboard_check_pressed(vk_escape) & (activeMenu == MENU_MAIN_OPTION)){
+    activeMenu = MENU_MAIN;
 }
 
 /*
@@ -161,7 +161,7 @@ if (menuIsActive == true){
 
 
 ///Cursor listener
-if (global.cursorStatus == CURSOR_ENABLED){
+if (cursorStatus == CURSOR_ENABLED){
 	// Change postion
 	var cursorMoved = 0; //Stop cursor in next iteration
 	cursorMoved -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
@@ -169,29 +169,29 @@ if (global.cursorStatus == CURSOR_ENABLED){
 
 	// Reach maximum or minimum position value
 	if(cursorMoved != 0){ // If cursor moved do he reached
-	    global.menuPosition += cursorMoved;
-	    if(global.menuPosition < 0){ //minimal value
-			global.menuPosition = array_length_1d(global.menuElements) - 1;
+	    menuPosition += cursorMoved;
+	    if(menuPosition < 0){ //minimal value
+			menuPosition = array_length_1d(menuElements) - 1;
 			}
-	    if(global.menuPosition > array_length_1d(global.menuElements) - 1){ // maximal value
-			global.menuPosition = 0;
+	    if(menuPosition > array_length_1d(menuElements) - 1){ // maximal value
+			menuPosition = 0;
 			}
-		show_debug_message(global.menuPosition);
+		show_debug_message(menuPosition);
 	}
 	
 	// Listener for confirm selected activation by "Enter", "Shift" or "Space" buttons
 	var push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_shift), keyboard_check_pressed(vk_space), 0);
 	if(push == 1){
-		if(global.activeMenu == MENU_MAIN || global.activeMenu == MENU_PAUSE || global.activeMenu == MENU_PAUSE_OPTION || global.activeMenu == MENU_MAIN_OPTION){
-			scr_execute_menu_command(scr_interprete_menu_string(global.menuElements[global.menuPosition]));
+		if(activeMenu == MENU_MAIN || activeMenu == MENU_PAUSE || activeMenu == MENU_PAUSE_OPTION || activeMenu == MENU_MAIN_OPTION){
+			scr_execute_menu_command(scr_interprete_menu_string(menuElements[menuPosition]));
 		} else {
-			scr_execute_menu_command(global.menuPosition);
+			scr_execute_menu_command(menuPosition);
 		}
 	}
 }
 
-if(global.activeMenu == STATE_GAME){
-	global.cursorStatus = CURSOR_DISABLED;
+if(activeMenu == STATE_GAME){
+	cursorStatus = CURSOR_DISABLED;
 }
 
 

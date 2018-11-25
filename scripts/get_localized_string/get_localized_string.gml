@@ -1,0 +1,1 @@
+return ds_map_find_value(ui_lang_map, argument0);

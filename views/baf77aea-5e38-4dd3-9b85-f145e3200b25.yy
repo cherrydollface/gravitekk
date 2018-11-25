@@ -4,8 +4,12 @@
     "mvc": "1.1",
     "name": "baf77aea-5e38-4dd3-9b85-f145e3200b25",
     "children": [
+        "f84b747c-4d20-4075-aa2d-ede00d4efca8",
         "34c31892-9aea-427c-9c65-3c219613e515",
         "7ac2ab8f-aeea-4c92-b644-cc9d6b6bcd51",
+        "88b554a0-5750-4afa-b2ee-e91c580346bc",
+        "8ecded97-c268-4029-ae6a-6275471cfaa6",
+        "0edb527e-8b88-430c-b1ab-53b9660d4fbd",
         "26743328-7aca-4b9a-93b8-337fec9891c0",
         "0285644c-a2aa-45ee-9509-06c43b7a938d",
         "438b0c45-bb93-43c6-97e3-5e875ea7723e",

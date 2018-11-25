@@ -29,7 +29,9 @@
         "1a45da23-2216-4561-b5eb-ae54988b4199",
         "23ab5820-7a00-4dc8-90ed-a774f27d0a4b",
         "410257cd-31b4-4eef-8f8b-c507ddd935fd",
-        "78dd7ec6-9769-48e9-a7c6-2a2338d157f6"
+        "78dd7ec6-9769-48e9-a7c6-2a2338d157f6",
+        "e0baebee-8cf1-48b6-86ac-cdd3c3af52a7",
+        "1d05c900-4779-408a-a586-4c794cdb36da"
     ],
     "filterType": "GMObject",
     "folderName": "map",

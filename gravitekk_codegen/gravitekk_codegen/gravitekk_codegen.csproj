@@ -54,6 +54,8 @@
     <Compile Include="Parsers\CreateCharacterParser.cs" />
     <Compile Include="Parsers\DestroyCharacterParser.cs" />
     <Compile Include="Parsers\Helper.cs" />
+    <Compile Include="Parsers\MissionDialog\DialogAliasParser.cs" />
+    <Compile Include="Parsers\MissionDialog\DialogLineParser.cs" />
     <Compile Include="Parsers\NarratorTextParser.cs" />
     <Compile Include="Parsers\SetCharacterActiveParser.cs" />
     <Compile Include="Preprocessor.cs" />

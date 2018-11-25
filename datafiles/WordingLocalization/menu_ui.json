@@ -1,0 +1,12 @@
+{
+	"Default": {
+		"New game" : "New game",
+		"Save game" : "Save game",
+		"Load game" : "Load game",
+		"Quit" : "Quit",
+		"Options" : "Options",
+		"Resume" : "Resume",
+		"About" : "About",
+		"Empty save slot" : "Empty save slot"
+	}
+}

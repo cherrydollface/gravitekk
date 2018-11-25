@@ -4,37 +4,37 @@
 
 if !menuIsActive return 0;
 
-if (global.activeMenu == MENU_MAIN){
-            global.menuElements = global.mainMenuElements;
+if (activeMenu == MENU_MAIN){
+            menuElements = mainMenuElements;
 			scr_draw_menu();
             }
 
-if (global.activeMenu == MENU_PAUSE){  
+if (activeMenu == MENU_PAUSE){  
 			scr_draw_cover_of_darkness();
-            global.menuElements = global.pauseMenuElements;
+            menuElements = pauseMenuElements;
 	//		scr_initialize_saved_games_values();
 			scr_draw_menu();
             }
             
-if ((global.activeMenu == MENU_PAUSE_SAVE) || (global.activeMenu == MENU_PAUSE_LOAD) || (global.activeMenu == MENU_MAIN_LOAD)){  
+if ((activeMenu == MENU_PAUSE_SAVE) || (activeMenu == MENU_PAUSE_LOAD) || (activeMenu == MENU_MAIN_LOAD)){  
 			scr_draw_cover_of_darkness();
 			scr_initialize_menus();
-            global.menuElements = global.savedGames;
+            menuElements = savedGames;
 			// Enable player mouse input status for skip double screen activation.
-            global.playerInput = PLAYER_INPUT_ENABLED;		
+            playerInput = PLAYER_INPUT_ENABLED;		
 			scr_draw_menu();
             }
 			
-if(global.activeMenu == MENU_MAIN_OPTION){
+if(activeMenu == MENU_MAIN_OPTION){
 			scr_draw_cover_of_darkness();
-            global.menuElements = global.optionsMenu;
-			global.playerInput = PLAYER_INPUT_ENABLED;	
+            menuElements = optionsMenu;
+			playerInput = PLAYER_INPUT_ENABLED;	
 			scr_draw_menu();
             }
 			
-if(global.activeMenu == MENU_PAUSE_OPTION){
+if(activeMenu == MENU_PAUSE_OPTION){
 			scr_draw_cover_of_darkness();
-            global.menuElements = global.optionsMenu;
-			global.playerInput = PLAYER_INPUT_ENABLED;	
+            menuElements = optionsMenu;
+			playerInput = PLAYER_INPUT_ENABLED;	
 			scr_draw_menu();
             }

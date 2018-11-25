@@ -12,7 +12,7 @@ switch(argument0){
 		break;
 	}
 	case "Load":{
-		if(global.activeMenu == MENU_MAIN){
+		if(activeMenu == MENU_MAIN){
 			return MENU_MAIN_LOAD;
 		} else {
 			return MENU_PAUSE_LOAD;
@@ -20,7 +20,7 @@ switch(argument0){
 		break;
 	}
 	case "Option":{
-		if (global.activeMenu == MENU_MAIN){
+		if (activeMenu == MENU_MAIN){
 			return MENU_MAIN_OPTION;
 		}else{
 			return MENU_PAUSE_OPTION}
@@ -31,7 +31,7 @@ switch(argument0){
 		break;
 	}
 	case "Quit":{
-		if (global.activeMenu == MENU_MAIN){
+		if (activeMenu == MENU_MAIN){
 			return MENU_MAIN_QUIT;
 		}else{
 		return MENU_PAUSE_QUIT;}

@@ -4,26 +4,27 @@ blinkAlpha = 0.5 + 0.5 * sin(current_time * 0.005);
 
 
 
-//if (menuIsActive == true){
+if (menuIsActive == true){
 // Main menu    
-	if (global.activeMenu == MENU_MAIN){
+
+	if (activeMenu == MENU_MAIN){
 		var xPos = scr_get_menu_x_positions();
 		var yPos = scr_get_menu_y_positions(PAUSE_MENU_POSITIONS_LIMIT);
 
 		if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
-				global.menuPosition = 0;
+				menuPosition = 0;
 				if(mouse_check_button_pressed (mb_left)){;
 				scr_execute_menu_command(MENU_MAIN_START);
 	    }} // Start game
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
-				global.menuPosition = 1;
+				menuPosition = 1;
 	            if(mouse_check_button_pressed (mb_left)){
 					scr_execute_menu_command(MENU_MAIN_LOAD);
 	            }} // Load
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
-				global.menuPosition = 2;
+				menuPosition = 2;
 	            if(mouse_check_button_pressed (mb_left)){
-					global.playerInput = PLAYER_INPUT_DISABLED;
+					playerInput = PLAYER_INPUT_DISABLED;
 					scr_execute_menu_command(MENU_MAIN_OPTION);
 	            }} // Options
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
@@ -36,31 +37,36 @@ blinkAlpha = 0.5 + 0.5 * sin(current_time * 0.005);
 	            }} // Quit
 	}
 	// Pause
-	if(global.activeMenu == MENU_PAUSE){
+	if(activeMenu == MENU_PAUSE){
 		//Create rectangle x and y start positions [n] and y final position [n + 1]
 		var xPos = scr_get_menu_x_positions();
 		var yPos = scr_get_menu_y_positions(PAUSE_MENU_POSITIONS_LIMIT);
 	
 		if(point_in_rectangle(mouse_x, mouse_y, xPos[0], (yPos[0]), xPos[1], (yPos[1]))){
+					menuPosition = 0;
 		            if(mouse_check_button_pressed (mb_left)){
 					scr_execute_menu_command(MENU_PAUSE_RESUME);
 	            }} // Resume
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[2], xPos[1], yPos[3])){
+					menuPosition = 1;
 		            if(mouse_check_button_pressed (mb_left)){
-		            global.playerInput = PLAYER_INPUT_DISABLED;
+		            playerInput = PLAYER_INPUT_DISABLED;
 					scr_execute_menu_command(MENU_PAUSE_SAVE);
 	            }} // Save
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[4], xPos[1], yPos[5])){
+					menuPosition = 2;
 		            if(mouse_check_button_pressed (mb_left)){
-		            global.playerInput = PLAYER_INPUT_DISABLED;
+		            playerInput = PLAYER_INPUT_DISABLED;
 					scr_execute_menu_command(MENU_PAUSE_LOAD);
 	            }} // Load
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[6], xPos[1], yPos[7])){
+					menuPosition = 3;
 		            if(mouse_check_button_pressed (mb_left)){
-					global.playerInput = PLAYER_INPUT_DISABLED;
+					playerInput = PLAYER_INPUT_DISABLED;
 					scr_execute_menu_command(MENU_PAUSE_OPTION);
 	            }} // Option 
 		else if(point_in_rectangle(mouse_x, mouse_y, xPos[0], yPos[8], xPos[1], yPos[9])){
+					menuPosition = 4;
 		            if(mouse_check_button_pressed (mb_left)){
 					scr_execute_menu_command(MENU_PAUSE_QUIT);
 	            }
@@ -72,7 +78,7 @@ blinkAlpha = 0.5 + 0.5 * sin(current_time * 0.005);
 	}
             
 	// Save
-	if ((global.activeMenu == MENU_PAUSE_SAVE) & (global.playerInput == PLAYER_INPUT_ENABLED)){
+	if ((activeMenu == MENU_PAUSE_SAVE) & (playerInput == PLAYER_INPUT_ENABLED)){
 		var xPos = scr_get_menu_x_positions();
 		var yPos = scr_get_menu_y_positions(SLOTS_FOR_SAVES);
 	
@@ -95,7 +101,7 @@ blinkAlpha = 0.5 + 0.5 * sin(current_time * 0.005);
 	}   
 
 	// Load
-	if (((global.activeMenu == MENU_PAUSE_LOAD) || (global.activeMenu == MENU_MAIN_LOAD)) & (global.playerInput == PLAYER_INPUT_ENABLED)){
+	if (((activeMenu == MENU_PAUSE_LOAD) || (activeMenu == MENU_MAIN_LOAD)) & (playerInput == PLAYER_INPUT_ENABLED)){
 		var xPos = scr_get_menu_x_positions();
 		var yPos = scr_get_menu_y_positions(SLOTS_FOR_SAVES);
 		
@@ -123,4 +129,5 @@ blinkAlpha = 0.5 + 0.5 * sin(current_time * 0.005);
 	            scr_execute_menu_command(3);
 	            }
 			}
+	}
 }

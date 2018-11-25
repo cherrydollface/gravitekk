@@ -4,7 +4,7 @@
 blinkAlpha = 1;
 scr_global_variables();
 //global.gameState = STATE_MENU;
-global.activeMenu = MENU_MAIN;//MENU_MAIN;
+activeMenu = MENU_MAIN;//MENU_MAIN;
 menuIsActive = false;
 
 // todo create ini file with menu localization
@@ -17,7 +17,7 @@ pauseMenu[3] = "Option";
 pauseMenu[4] = "Quit";
 pauseMenu[5] = "Test";
 
-global.pauseMenuElements = pauseMenu;
+pauseMenuElements = pauseMenu;
 
 // Available selections in main menu
 menu[0] = "Start"; 
@@ -26,19 +26,19 @@ menu[2] = "Option";
 menu[3] = "About";
 menu[4] = "Quit";
 
-global.mainMenuElements = menu;
+mainMenuElements = menu;
 
 // Available selections in option menu
 optionsMenu[0] = "Music";
 optionsMenu[1] = "Sound";
 
-global.optionsMenu = optionsMenu;
+optionsMenu = optionsMenu;
 
-global.menuElements = menu;
+menuElements = menu;
 
-global.playerInput = PLAYER_INPUT_ENABLED; 
+playerInput = PLAYER_INPUT_ENABLED; 
 
-global.saveGameLevel = "startMenu";
+saveGameLevel = "startMenu";
 
 // Misc values
 spaceBetweenPositions = 64; 
