@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "0b4b59ab-07ba-4eb8-af75-e46bce658ea4",
+            "Value": {
+                "id": "3900e61b-8e81-4cb9-b48e-2634884b8bc2",
+                "resourcePath": "scripts\\scr_gamepad_any_button_pressed\\scr_gamepad_any_button_pressed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0b974149-de4f-48c0-9aac-4d4a82a28958",
             "Value": {
                 "id": "cdee8b76-0d91-410b-9a0c-905973a55acb",
@@ -467,6 +475,14 @@
             "Value": {
                 "id": "d76508d1-2b5d-4a93-b7e0-fe908120c9b1",
                 "resourcePath": "scripts\\scr_pause_menu_handler\\scr_pause_menu_handler.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2b62b58e-e182-481d-8e93-f1e3a10bdbe3",
+            "Value": {
+                "id": "846d15d5-7ab6-4883-9d2b-4925d4292af3",
+                "resourcePath": "scripts\\scr_detect_gamepad\\scr_detect_gamepad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -963,6 +979,14 @@
             "Value": {
                 "id": "90652f93-2c62-49b9-9a09-d17bf95ec917",
                 "resourcePath": "views\\63ca592a-a760-4956-b33e-883133034c75.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "64675204-eb15-4c5b-85fb-25626bdfd2ac",
+            "Value": {
+                "id": "1a6ad649-1719-480b-9b8b-d484cbcd40fb",
+                "resourcePath": "views\\64675204-eb15-4c5b-85fb-25626bdfd2ac.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1531,6 +1555,14 @@
             "Value": {
                 "id": "202426cd-7eba-4771-b831-836f26bf3006",
                 "resourcePath": "objects\\o_player\\o_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "95ed33d4-7fc4-4008-a2c6-26d5a37862df",
+            "Value": {
+                "id": "820ac44b-2241-403c-b416-993e748a2b64",
+                "resourcePath": "objects\\o_world_base\\o_world_base.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2511,6 +2543,14 @@
             }
         },
         {
+            "Key": "fb28d988-77c2-4501-9dd8-39d9a97dd9d6",
+            "Value": {
+                "id": "4c852bdc-5e6d-433a-aa0c-59526011de71",
+                "resourcePath": "scripts\\scr_check_gamepad\\scr_check_gamepad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb333876-1d23-4f71-9496-6cd814708f73",
             "Value": {
                 "id": "f2c6ef78-6792-487a-b9bd-e6bc52e1767f",
@@ -2648,7 +2688,10 @@
         "8028fffe-eaa9-4312-8148-510b99c9cc69",
         "85cf7b12-dab1-47cf-8563-633f3338edc1",
         "c8997cdb-a9e3-485f-9378-24f45e11a6cd",
-        "7d1d3af9-f3a3-4014-885d-894c3d917c2c"
+        "7d1d3af9-f3a3-4014-885d-894c3d917c2c",
+        "2b62b58e-e182-481d-8e93-f1e3a10bdbe3",
+        "0b4b59ab-07ba-4eb8-af75-e46bce658ea4",
+        "fb28d988-77c2-4501-9dd8-39d9a97dd9d6"
     ],
     "tutorial": ""
 }

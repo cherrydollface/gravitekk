@@ -8,7 +8,8 @@
         "10c501c3-68f7-495d-8639-f9268f228852",
         "ef80c883-0649-4393-a68c-55ec10a019a7",
         "7dc16170-5ca6-4c4a-951f-1baabe656288",
-        "7e56b4f2-e8f6-4eef-a845-bd20dfb32603"
+        "7e56b4f2-e8f6-4eef-a845-bd20dfb32603",
+        "64675204-eb15-4c5b-85fb-25626bdfd2ac"
     ],
     "filterType": "GMScript",
     "folderName": "Game Maintenance",

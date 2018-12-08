@@ -1,0 +1,1 @@
+return gamepad_button_check(global.gamePadIndex, argument0)

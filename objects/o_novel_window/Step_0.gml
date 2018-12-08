@@ -7,10 +7,7 @@ with(instance_find(o_bg, 0)) {
 if(bgTransition) return 0;
 
 var userInput = (mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_enter) ||
-   gamepad_button_check_pressed(4, gp_face1) ||
-	gamepad_button_check_pressed(4, gp_face2) ||
-	gamepad_button_check_pressed(4, gp_face3) ||
-	gamepad_button_check_pressed(4, gp_face4)
+	scr_gamepad_any_button_pressed()
 );
 
 if (characters < message_length && userInput) {

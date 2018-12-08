@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(gamepad_button_check_pressed(4, gp_start) /*& (global.activeMenu != MENU_MAIN) & (global.activeMenu != MENU_MAIN_LOAD) & (global.activeMenu != MENU_MAIN_OPTION)*/){
+if(gamepad_button_check_pressed(global.gamePadIndex, gp_start) /*& (global.activeMenu != MENU_MAIN) & (global.activeMenu != MENU_MAIN_LOAD) & (global.activeMenu != MENU_MAIN_OPTION)*/){
 	if(global.gamestate == STATE_PAUSE) {
 		global.gamestate = STATE_GAME;
 		instance_destroy(self);
@@ -13,8 +13,8 @@ if(gamepad_button_check_pressed(4, gp_start) /*& (global.activeMenu != MENU_MAIN
 if (cursorStatus == CURSOR_ENABLED){
 	// Change postion
 	var cursorMoved = 0; //Stop cursor in next iteration
-	cursorMoved -= gamepad_button_check_pressed(4, gp_padu)
-	cursorMoved += gamepad_button_check_pressed(4, gp_padd)
+	cursorMoved -= gamepad_button_check_pressed(global.gamePadIndex, gp_padu)
+	cursorMoved += gamepad_button_check_pressed(global.gamePadIndex, gp_padd)
 
 	// Reach maximum or minimum position value
 	if(cursorMoved != 0){ // If cursor moved do he reached
@@ -28,18 +28,10 @@ if (cursorStatus == CURSOR_ENABLED){
 		show_debug_message(menuPosition);
 	}
 	
-	// Listener for confirm selected activation by "Enter", "Shift" or "Space" buttons
-	var push = max(gamepad_button_check_pressed(4, gp_face1), 
-	gamepad_button_check_pressed(4, gp_face2),
-	gamepad_button_check_pressed(4, gp_face3),
-	gamepad_button_check_pressed(4, gp_face4))//max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_shift), keyboard_check_pressed(vk_space), 0);
+
+	var push = max(scr_gamepad_any_button_pressed(), keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_shift), keyboard_check_pressed(vk_space), 0);
 	if(push == 1){
-/*
-		if(activeMenu == MENU_MAIN || activeMenu == MENU_PAUSE || activeMenu == MENU_PAUSE_OPTION || activeMenu == MENU_MAIN_OPTION){
-			scr_execute_menu_command(scr_interprete_menu_string(menuElements[menuPosition]));
-		} else {
-*/		
-			script_execute(menu_interpretator, menuPosition);
+		script_execute(menu_interpretator, menuPosition);
 	}	
 }
 
@@ -71,6 +63,3 @@ for(var i = 0; i < nunPositions; i++) {
 				script_execute(menu_interpretator, menuPosition);
 	    }}
 }
-
-
-//if(!interceptKeyboard) return 0;
