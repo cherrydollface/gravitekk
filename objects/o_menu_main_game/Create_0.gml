@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+drawPositionOffsetX = 0;
+drawPositionOffsetY = -CELLSIZE * 2;
 menu_interpretator = scr_pause_menu_handler;
 
 menuElements[0] = "Resume";

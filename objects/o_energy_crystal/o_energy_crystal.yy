@@ -32,7 +32,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "ed960b01-4a55-4c65-a268-39b38e9957da",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "bonusPowerupPoints",
+            "varType": 1
+        }
     ],
     "solid": false,
     "spriteId": "b51f2c63-c4bb-4c4c-922f-affeeecc751f",

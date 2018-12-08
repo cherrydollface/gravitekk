@@ -34,6 +34,20 @@ var world = instance_find(o_mission_world, 0);
 world.sequence_index = 6;//__b__.hitag;
 world.currentDialogName = __b__.dialog_name;//__b__.hitag;
 */
-action_create_object(o_window_dialog, 96, 32);
+instance_create_layer(96, 32, LAYER_DEFAULT_UI, o_window_dialog,);
+}
+}
+
+__b__ = action_if_object(o_invisible_trigger, x, y);
+if __b__
+{
+{
+/*	
+var world = instance_find(o_mission_world, 0);
+world.sequence_index = 6;//__b__.hitag;
+world.currentDialogName = __b__.dialog_name;//__b__.hitag;
+*/
+instance_destroy(triggerToDestroy);
+instance_create_layer(96, 32, LAYER_DEFAULT_UI, o_window_dialog,);
 }
 }

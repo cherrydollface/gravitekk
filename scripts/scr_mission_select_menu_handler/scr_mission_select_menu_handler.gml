@@ -15,7 +15,15 @@
 		case 2: {
 			room_goto(Area51);
 			break;
+		}
+		case 3: {
+			room_goto(City);
+			break;
 		}	
+		case 4: {
+			break;
+		}			
+		
 		default: {
 			menuEntryFound = false;
 			break;

@@ -42,6 +42,13 @@
 			}
 			break;
 		}
+		case MENU_PAUSE_DEBUG2:{
+            //scr_test();
+			with instance_create_layer(0, 0, LAYER_DEFAULT_UI, o_menu_debug_mission_chapter_select) do {
+				menu_parent = o_menu_main_game;
+			}
+			break;
+		}		
 		default: {
 			menuEntryFound = false;
 			break;

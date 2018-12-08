@@ -6,11 +6,12 @@ if(other.moving != 0) {
 	return 0;
 }
 
-var instanceType = o_gravipad;
+var instanceType = 0;//o_gravipad;
 switch(lotag) {
 	case DOOR_OPEN: {
-		instanceType = o_gravipad
+		instanceType = 0;//o_gravipad
 		break;
 	}
 }
 script_execute(action, hitag, instanceType);
+engaged = true;

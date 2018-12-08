@@ -1,5 +1,7 @@
 global.gamestate = STATE_GAME;
 global.energy = 0;
+global.selectedColor = 0;
+
 messager_script = scr_mission_1
 sequence_index = -1;
 

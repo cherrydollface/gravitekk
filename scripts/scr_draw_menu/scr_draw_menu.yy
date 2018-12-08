@@ -1,5 +1,5 @@
 {
-    "id": "c1349a21-9191-498e-9c4e-db75b386fd9d",
+    "id": "836383e4-b357-4e7f-af3e-9f19da77efb2",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_draw_menu",

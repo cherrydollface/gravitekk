@@ -12,6 +12,8 @@ with instance_find(o_mission_world, 0) do {
 	localMessages = script_execute(dialog_message_getter);
 }
 
+message[0] = "Я опять не выучил текст!"
+
 portait = instance_create_layer(x + (lookup_width_cells + 1) *CELLSIZE, y, LAYER_DEFAULT_UI, o_dialog_portraiit)
 skipButton = instance_create_layer(x, y, LAYER_DEFAULT_UI, o_skip_button);
 skipButton.tag_id = self;

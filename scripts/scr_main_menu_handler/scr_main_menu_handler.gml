@@ -19,7 +19,7 @@
 		}
 		case MENU_MAIN_QUIT: {
 			with instance_create_layer(0, 0, LAYER_DEFAULT_UI, o_menu_modal_base) do {				
-				menu_parent = o_menu_main_game;
+				menu_parent = o_menu_main;
 				modal_action = scr_quit_game;
 			}
 			break;
@@ -30,6 +30,12 @@
 			}
 			break;
 		}
+		case MENU_MAIN_DEBUG2:{
+			with instance_create_layer(0, 0, LAYER_DEFAULT_UI, o_menu_debug_mission_chapter_select) do {
+				menu_parent = o_menu_main;
+			}
+			break;
+		}		
 		default: {
 			menuEntryFound = false;
 			break;

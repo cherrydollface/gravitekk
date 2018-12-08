@@ -9,9 +9,9 @@ var positions = 0;
 
 for(i = 0; i < number_of_positions ; i ++){
 		// First y position
-		positions[i * 2] = y_pos + (i * SPACE_BETWEEN_POSITIONS * 0.5) - CELLSIZE;
+		positions[i * 2] = y_pos + (i * SPACE_BETWEEN_POSITIONS * 0.5)// - CELLSIZE;
 		// Last y position
-		positions[(i * 2) + 1] = y_pos + ((i + 1) * SPACE_BETWEEN_POSITIONS * 0.5) - CELLSIZE;
+		positions[(i * 2) + 1] = y_pos + ((i + 1) * SPACE_BETWEEN_POSITIONS * 0.5)// - CELLSIZE;
 }
 
 return positions;

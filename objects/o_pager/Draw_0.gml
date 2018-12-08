@@ -1,3 +1,4 @@
+draw_background(bg_statusbar2, 0, 480 -32)
 draw_set_color(c_yellow);
 draw_set_font(pager_font)
 draw_text(x - 300, y, global.energy);

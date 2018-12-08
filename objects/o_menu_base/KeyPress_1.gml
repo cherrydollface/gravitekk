@@ -1,3 +1,4 @@
+
 if(!interceptKeyboard) return 0;
 
 if((keyboard_check_pressed(vk_escape) || mouse_check_button_pressed(mb_middle)) /*& (global.activeMenu != MENU_MAIN) & (global.activeMenu != MENU_MAIN_LOAD) & (global.activeMenu != MENU_MAIN_OPTION)*/){
@@ -41,5 +42,4 @@ if (cursorStatus == CURSOR_ENABLED){
 if(activeMenu == STATE_GAME){
 	cursorStatus = CURSOR_DISABLED;
 }
-
 

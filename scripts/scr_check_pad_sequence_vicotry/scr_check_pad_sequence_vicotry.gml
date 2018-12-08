@@ -1,0 +1,1 @@
+scr_check_pad_sequence_base(scr_mission_complete);

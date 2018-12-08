@@ -1,6 +1,8 @@
 ﻿{
 	"Default" : {
 		"Chapter1" : "Часть 1\nПатруль",
-		"MissionAccomplished" : "Миссия выполнена!"
+		"Chapter2" : "Часть 2\nАгата",		
+		"MissionAccomplished" : "Миссия выполнена!",
+		"EndOfDemo" : "Конец демо-версии"
 	}
 }

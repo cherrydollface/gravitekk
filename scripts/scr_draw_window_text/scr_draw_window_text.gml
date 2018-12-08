@@ -6,5 +6,5 @@ if (characters >= message_length) {
 	ww = string_width_ext( string_hash_to_newline(message_draw),  CELLSIZE * 0.5, CELLSIZE * (lookup_width_cells - 1));
 	var hh;
 	hh = string_height_ext(string_hash_to_newline(message_draw),  CELLSIZE * 0.5, CELLSIZE * (lookup_width_cells - 1));
-	draw_text(x + CELLSIZE * 0.5 + ww, y + CELLSIZE * 0.5 + hh, "[]");
+	//draw_text(x + CELLSIZE * 0.5 + ww, y + CELLSIZE * 0.5 + hh, "[]");
 }

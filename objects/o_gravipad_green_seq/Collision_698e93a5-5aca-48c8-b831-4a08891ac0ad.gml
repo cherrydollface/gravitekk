@@ -3,6 +3,6 @@
 if(!engaged) {
 	return 0;
 } else {
-	scr_check_pad_sequence();
+	if (action== scr_placeholder) scr_check_pad_sequence() else script_execute(action)
 	//event_inherited();
 }

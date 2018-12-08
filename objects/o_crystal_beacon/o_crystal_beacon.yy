@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "o_crystal_beacon",
     "eventList": [
-        {
-            "id": "5c1e2c35-cdd1-4615-b41f-8b4ec6e7f07d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "6e9b48a3-7988-4116-a92c-af0333adb350",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "0b04af7a-d746-46c8-a4f8-2fc2e9bd4f8f"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
